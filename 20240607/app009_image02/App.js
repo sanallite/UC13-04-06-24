@@ -1,4 +1,4 @@
-/* Aula 5 - Image, Desafio 4 */
+/* Aula 5 - Image, Desafio 4 - 08 de junho de 2024 */
 
 import React from 'react';
 /* Importanto a biblioteca geral do React */
