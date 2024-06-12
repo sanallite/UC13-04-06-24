@@ -23,6 +23,9 @@ function App() {
   destaqueTitulo = "Sesc Paraná";
   botaoJogar = "Comece a jogar";
   botaoRegulamento = "Regulamento";
+  
+  let imagemPrincipal = require('./img/imagem.png');
+  let imagemApoio = require('./img/apoio_02.png');
 
   return (
     <View style={{ flex: 1, backgroundColor: corFundo }}>
@@ -37,7 +40,7 @@ function App() {
       </View>
 
       <View style={{ flexDirection: 'row', justifyContent: 'center', padding: espacamento }}>
-        <Image source={ require('./img/imagem.png') } style={{ width: 342, height: 250 }}></Image>
+        <Image source={ imagemPrincipal } style={{ width: 342, height: 250 }}></Image>
       </View>
 
       <View style={{ flex: 1, flexDirection: 'column', justifyContent: 'space-evenly', alignItems: 'center' }}>
@@ -51,7 +54,7 @@ function App() {
       </View>
 
       <View style={{ flexDirection: 'row', justifyContent: 'flex-end', padding: espacamento }}>
-        <Image source={ require('./img/apoio_02.png') } style={{ width: 116, height: 52 }}></Image>
+        <Image source={ imagemApoio } style={{ width: 116, height: 52 }}></Image>
       </View>
     </View>
   )
