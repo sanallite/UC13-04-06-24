@@ -1,6 +1,6 @@
 /* Aula 6 - Variáveis, Desafio 1 */
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Image} from 'react-native';
 
 function App() {
   let dia, nome;
@@ -25,20 +25,21 @@ function App() {
       </View> */}
       {/* Exemplo Inicial */}
 
-      <View style={{ height: '20%' }}>
+      <View>
         <Text style={{ fontSize: '1.5em', fontFamily: 'Times', textAlign: 'center' }}>{Titulo}</Text>
       </View>
 
-      <View style={{ flexDirection: 'row', justifyContent: 'center' }}>
-        <View style={{ width: 120, height: 80, borderColor: 'red', borderWidth: 3 }}></View>
+      <View style={{ flexDirection: 'row', justifyContent: 'center', marginVertical: 20 }}>
+        <View style={{ width: 120, height: 80, borderColor: 'red', borderWidth: 3, backgroundColor: 'darkred' }}></View>
       </View>
 
-      <View style={{ flexDirection: 'row', justifyContent: 'center' }}>
-        <View style={{ width: 80, height: 100, borderColor: 'white', borderWidth: 2, borderTopLeftRadius: 100, borderTopRightRadius: 10, borderBottomLeftRadius: 70, borderBottomRightRadius: 70 }}></View>
-        <View style={{ width: 80, height: 160, borderColor: 'white', borderWidth: 2, borderRadius: '50%' }}></View>
+      <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+        <Image source={ require('./img/thousand.webp') } style={{ width: 120, height: 160, borderColor: 'white', borderWidth: 2, borderRadius: '50%' }}></Image>
+
+        <Image source={ require('./img/rise.png') } style={{ width: 120, height: 160, borderColor: 'white', borderWidth: 2, borderRadius: '50%' }}></Image>
       </View>
       
-      <View style={{ height: '70%' }}>
+      <View style={{ flex: 1, marginVertical: 20 }}>
         <Text style={{ fontSize: 20, textAlign: 'justify' }}>{Paragrafo}</Text>
       </View>
 
