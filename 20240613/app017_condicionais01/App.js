@@ -1,4 +1,4 @@
-/* Aula 7 - Condicionais */
+/* Aula 7 - Estruturas Condicionais */
 
 import React from 'react';
 import {Text, View, Image} from 'react-native';
@@ -57,6 +57,7 @@ function App() {
         </View>
       </View>
     );
+    // O conteúdo acima só será exibido se a variável opção tiver o valor 1, caso contrário será exibido o conteúdo abaixo.
 
   else {
     return (
