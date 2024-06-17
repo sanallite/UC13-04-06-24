@@ -6,7 +6,7 @@ import {View, Text, Image} from 'react-native';
 function App() {
   let pagina1 = "Turismo";
   let pagina2 = "Programação";
-  let pagina = pagina2;
+  let pagina = pagina1;
   const corTercearia = "darkgreen";
   const fundoPrincipal = "rgb(242, 242, 242)";
   const corPrimaria = "#0052cc";
