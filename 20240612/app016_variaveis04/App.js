@@ -48,61 +48,123 @@ function App() {
 
   return (
     <View style={{ flex: 1, backgroundColor: corFundo }}>
-      <View style={{ backgroundColor: corPrimaria, flexDirection: 'row' }}>
-        <Image source={ iconeVoltar } style={{ width: 20, height: 20 }}></Image>
+      <View style={{ backgroundColor: corPrimaria, flexDirection: 'row', alignItems: 'center' }}>
+        <Image source={ iconeVoltar } style={{ width: 20, height: 20, marginHorizontal: 20 }}></Image>
 
-        <Text style={{ color: corSecundaria }}>
+        <Text style={{ color: corSecundaria, fontSize: '1.4em', margin: '0.5em', fontWeight: 'bold' }}>
           {pagina}
         </Text>
       </View>
 
-      <View style={{ backgroundColor: corSecundaria, flexDirection: 'row' }}>
-        <Text>
+      <View style={{ backgroundColor: corSecundaria, flexDirection: 'row', margin: 16, padding: '0.5em', justifyContent: 'space-between', alignItems: 'center', borderRadius: 8 }}>
+        <Text style={{ color: corTercearia }}>
           {textoPesquisa}
         </Text>
 
         <Image source={ iconePesquisa } style={{ width: 20, height: 20 }}></Image>
       </View>
 
-      <View>
-        <Text style={{ color: corPrimaria }}>
+      <View style={{ marginHorizontal: 20 }}>
+        <Text style={{ color: corPrimaria, fontSize: '1.4em' }}>
           {titulo}
         </Text>
       </View>
 
-      <View>
-        <View style={{ flexDirection: 'row' }}>
+      <View style={{ flex: 1, marginHorizontal: 20 }}>
+        <View style={{ flexDirection: 'row', padding: 10, marginBottom: 5, backgroundColor: corSecundaria }}>
           <View>
             <Image source={ fotoAgua } style={{ width: 100, height: 100 }}></Image>
           </View>
 
-          <View style={{ flexDirection: 'column' }}>
+          <View style={{ flexDirection: 'column', marginLeft: 10, justifyContent: 'center' }}>
             <View>
-              <Text>
+              <Text style={{ fontSize: '1.2em', color: corPrimaria, fontWeight: 'bold' }}>
                 {unidade1}
               </Text>
             </View>
 
             <View>
-              {enderecoUN1}
+              <Text>{enderecoUN1}</Text>
             </View>
           </View>
-
-          
         </View>
 
-        <View>
+        <View style={{ flexDirection: 'row', padding: 10, marginBottom: 5, backgroundColor: corSecundaria }}>
+          <View>
+            <Image source={ fotoCentro } style={{ width: 100, height: 100 }}></Image>
+          </View>
 
+          <View style={{ flexDirection: 'column', marginLeft: 10, justifyContent: 'center' }}>
+            <View>
+              <Text style={{ fontSize: '1.2em', color: corPrimaria, fontWeight: 'bold' }}>
+                {unidade2}
+              </Text>
+            </View>
+
+            <View>
+              <Text>{enderecoUN2}</Text>
+            </View>
+          </View>
         </View>
 
-        <View>
+        <View style={{ flexDirection: 'row', padding: 10, marginBottom: 5, backgroundColor: corSecundaria }}>
+          <View>
+            <Image source={ fotoEsquina } style={{ width: 100, height: 100 }}></Image>
+          </View>
 
+          <View style={{ flexDirection: 'column', marginLeft: 10, justifyContent: 'center' }}>
+            <View>
+              <Text style={{ fontSize: '1.2em', color: corPrimaria, fontWeight: 'bold' }}>
+                {unidade3}
+              </Text>
+            </View>
+
+            <View>
+              <Text>{enderecoUN3}</Text>
+            </View>
+          </View>
         </View>
 
-        <View>
+        <View style={{ flexDirection: 'row', padding: 10, marginBottom: 5, backgroundColor: corSecundaria }}>
+          <View>
+            <Image source={ fotoInfantil } style={{ width: 100, height: 100 }}></Image>
+          </View>
 
+          <View style={{ flexDirection: 'column', marginLeft: 10, justifyContent: 'center' }}>
+            <View>
+              <Text style={{ fontSize: '1.2em', color: corPrimaria, fontWeight: 'bold' }}>
+                {unidade4}
+              </Text>
+            </View>
+
+            <View>
+              <Text>{enderecoUN4}</Text>
+            </View>
+          </View>
         </View>
       </View>
+
+      <View style={{ backgroundColor: corPrimaria, flexDirection: 'row', justifyContent: 'space-around', padding: 10 }}>
+          <View style={{ flexDirection: 'column', alignItems: 'center' }}>
+            <Image source={ iconeBotao1 } style={{ width: 20, height: 18.5 }}></Image>
+            <Text style={{ color: corSecundaria, textAlign: 'center' }}>Início</Text>
+          </View>
+
+          <View style={{ flexDirection: 'column', alignItems: 'center' }}>
+            <Image source={ iconeBotao2 } style={{ width: 12.5, height: 18.5 }}></Image>
+            <Text style={{ color: corSecundaria, textAlign: 'center' }}>Credencial Sesc</Text>
+          </View>
+
+          <View style={{ flexDirection: 'column', alignItems: 'center' }}>
+            <Image source={ iconeBotao3 } style={{ width: 12.5, height: 18.5 }}></Image>
+            <Text style={{ color: corSecundaria, textAlign: 'center' }}>Pagamentos</Text>
+          </View>
+
+          <View style={{ flexDirection: 'column', alignItems: 'center' }}>
+            <Image source={ iconeBotao4 } style={{ width: 17.5, height: 18.5 }}></Image>
+            <Text style={{ color: corSecundaria, textAlign: 'center' }}>Refeições</Text>
+          </View>
+        </View>
     </View>
     /* Também é possível importar o font awesome se você instalá-lo no seu projeto, pesquise mais depois. */
   )
