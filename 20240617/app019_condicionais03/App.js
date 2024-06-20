@@ -63,106 +63,106 @@ function App() {
 
         <View style={{ flex: 1, marginHorizontal: 10 }}>
           <View style={{ flexDirection: 'row', justifyContent: 'space-around', marginBottom: 10 }}>
-            <View style={{ width: 125, height: 125, borderRadius: 20, justifyContent: 'center', alignItems: 'center', boxShadow: '-5px 5px 15px -5px rgba(0,0,0,0.25)' }}>
-              <Text style={{ textAlign: 'center', marginBottom: 10, fontWeight: 'bold', color: corTercearia }}>
+            <View style={{ justifyContent: 'space-between', width: 125, height: 125, borderRadius: 20, alignItems: 'center', boxShadow: '0px 0px 5px 1px rgba(0, 0,  0, 0.25)' }}>
+              <Text style={{ textAlign: 'center', marginTop: 10, fontWeight: 'bold', color: corTercearia }}>
                 Alimentação
               </Text>
 
-              <Image source={ alimentacao } style={{ width: 70, height: 70 }}></Image>
+              <Image source={ alimentacao } style={{ width: '50%', height: '50%', marginBottom: 10 }}></Image>
             </View>
 
-            <View style={{ width: 125, height: 125, borderRadius: 20, boxShadow: '-5px 5px 15px -5px rgba(0,0,0,0.25)', justifyContent: 'center', alignItems: 'center' }}>
-              <Text style={{ textAlign: 'center', marginBottom: 10 }}>
-                Alvarás, Certidões e Licitações
+            <View style={{ justifyContent:'space-between', width: 125, height: 125, borderRadius: 20, boxShadow: '0px 0px 5px 1px rgba(0,0,0,0.25)', alignItems: 'center' }}>
+              <Text style={{ textAlign: 'center', marginTop: 10, fontWeight: 'bold', color: corTercearia }}>
+                Alvarás, Certidões...
               </Text>
 
-              <Image source={ alvaras } style={{ width: 70, height: 70 }}></Image>
+              <Image source={ alvaras } style={{ width: '50%', height: '50%', marginBottom: 10 }}></Image>
             </View>
 
-            <View style={{ justifyContent: 'center', alignItems: 'center', width: 125, height: 125, borderRadius: 20, boxShadow: '-5px 5px 15px -5px rgba(0,0,0,0.25)' }}>
-              <Text style={{ textAlign: 'center', marginBottom: 10 }}>
+            <View style={{ justifyContent: 'space-between', alignItems: 'center', width: 125, height: 125, borderRadius: 20, boxShadow: '0px 0px 5px 1px rgba(0, 0,  0, 0.25)' }}>
+              <Text style={{ textAlign: 'center', marginTop: 10, fontWeight: 'bold', color: corTercearia }}>
                 Assistência Social
               </Text>
 
-              <Image source={ assistencia } style={{ width: 70, height: 70 }}></Image>
+              <Image source={ assistencia } style={{ width: '50%', height: '50%', marginBottom: 10 }}></Image>
             </View>
           </View>
 
           <View style={{ flexDirection: 'row', justifyContent: 'space-around', marginBottom: 10 }}>
-            <View style={{ justifyContent: 'center', alignItems: 'center', width: 125, height: 125, borderRadius: 20, boxShadow: '-5px 5px 15px -5px rgba(0,0,0,0.25)' }}>
-              <Text style={{ textAlign: 'center', marginBottom: 10 }}>
+            <View style={{ alignItems: 'center', width: 125, height: 125, borderRadius: 20, boxShadow: '0px 0px 5px 1px rgba(0, 0,  0, 0.25)' }}>
+              <Text style={{ textAlign: 'center', marginTop: 10, fontWeight: 'bold', color: corTercearia }}>
                 Capacitação
               </Text>
 
-              <Image source={ capacitacao } style={{ width: 70, height: 70 }}></Image>
+              <Image source={ capacitacao } style={{ width: '50%', height: '50%' }}></Image>
             </View>
 
-            <View style={{ justifyContent: 'center', alignItems: 'center', width: 125, height: 125, borderRadius: 20, boxShadow: '-5px 5px 15px -5px rgba(0,0,0,0.25)' }}>
-              <Text style={{ textAlign: 'center', marginBottom: 10 }}>
+            <View style={{ alignItems: 'center', width: 125, height: 125, borderRadius: 20, boxShadow: '0px 0px 5px 1px rgba(0, 0,  0, 0.25)' }}>
+              <Text style={{ textAlign: 'center', marginTop: 10, fontWeight: 'bold', color: corTercearia }}>
                 Cidadania
               </Text>
 
-              <Image source={ cidadania } style={{ width: 70, height: 70 }}></Image>
+              <Image source={ cidadania } style={{ width: '50%', height: '50%' }}></Image>
             </View>
 
-            <View style={{ justifyContent: 'center', alignItems: 'center', width: 125, height: 125, borderRadius: 20, boxShadow: '-5px 5px 15px -5px rgba(0,0,0,0.25)' }}>
-              <Text style={{ textAlign: 'center', marginBottom: 10 }}>
+            <View style={{ alignItems: 'center', width: 125, height: 125, borderRadius: 20, boxShadow: '0px 0px 5px 1px rgba(0, 0,  0, 0.25)' }}>
+              <Text style={{ textAlign: 'center', marginTop: 10, fontWeight: 'bold', color: corTercearia }}>
                 Concursos Públicos
               </Text>
 
-              <Image source={ concursos } style={{ width: 70, height: 70 }}></Image>
+              <Image source={ concursos } style={{ width: '50%', height: '50%' }}></Image>
             </View>
           </View>
 
           <View style={{ flexDirection: 'row', justifyContent: 'space-around', marginBottom: 10 }}>
-            <View style={{ justifyContent: 'center', alignItems: 'center', width: 125, height: 125, borderRadius: 20, boxShadow: '-5px 5px 15px -5px rgba(0,0,0,0.25)' }}>
-              <Text style={{ textAlign: 'center', marginBottom: 10 }}>
+            <View style={{ alignItems: 'center', width: 125, height: 125, borderRadius: 20, boxShadow: '0px 0px 5px 1px rgba(0, 0,  0, 0.25)' }}>
+              <Text style={{ textAlign: 'center', marginTop: 10, fontWeight: 'bold', color: corTercearia }}>
                 Cultura
               </Text>
 
-              <Image source={ cultura } style={{ width: 70, height: 70 }}></Image>
+              <Image source={ cultura } style={{ width: '50%', height: '50%' }}></Image>
             </View>
 
-            <View style={{ justifyContent: 'center', alignItems: 'center', width: 125, height: 125, borderRadius: 20, boxShadow: '-5px 5px 15px -5px rgba(0,0,0,0.25)' }}>
-              <Text style={{ textAlign: 'center', marginBottom: 10 }}>
+            <View style={{ alignItems: 'center', width: 125, height: 125, borderRadius: 20, boxShadow: '0px 0px 5px 1px rgba(0, 0,  0, 0.25)' }}>
+              <Text style={{ textAlign: 'center', marginTop: 10, fontWeight: 'bold', color: corTercearia }}>
                 Direitos Humanos
               </Text>
 
-              <Image source={ direitos } style={{ width: 70, height: 70 }}></Image>
+              <Image source={ direitos } style={{ width: '50%', height: '50%' }}></Image>
             </View>
 
-            <View style={{ justifyContent: 'center', alignItems: 'center', width: 125, height: 125, borderRadius: 20, boxShadow: '-5px 5px 15px -5px rgba(0,0,0,0.25)' }}>
-              <Text style={{ textAlign: 'center', marginBottom: 10 }}>
+            <View style={{ alignItems: 'center', width: 125, height: 125, borderRadius: 20, boxShadow: '0px 0px 5px 1px rgba(0, 0,  0, 0.25)' }}>
+              <Text style={{ textAlign: 'center', marginTop: 10, fontWeight: 'bold', color: corTercearia }}>
                 Educação
               </Text>
 
-              <Image source={ educacao } style={{ width: 70, height: 70 }}></Image>
+              <Image source={ educacao } style={{ width: '50%', height: '50%' }}></Image>
             </View>
           </View>
 
           <View style={{ flexDirection: 'row', justifyContent: 'space-around', marginBottom: 10 }}>
-            <View style={{ justifyContent: 'center', alignItems: 'center', width: 125, height: 125, borderRadius: 20, boxShadow: '-5px 5px 15px -5px rgba(0,0,0,0.25)' }}>
-              <Text style={{ textAlign: 'center', marginBottom: 10 }}>
+            <View style={{ alignItems: 'center', width: 125, height: 125, borderRadius: 20, boxShadow: '0px 0px 5px 1px rgba(0, 0,  0, 0.25)' }}>
+              <Text style={{ textAlign: 'center', marginTop: 10, fontWeight: 'bold', color: corTercearia }}>
                 Emergências
               </Text>
 
-              <Image source={ emergencias } style={{ width: 70, height: 70 }}></Image>
+              <Image source={ emergencias } style={{ width: '50%', height: '50%' }}></Image>
             </View>
 
-            <View style={{ justifyContent: 'center', alignItems: 'center', width: 125, height: 125, borderRadius: 20, boxShadow: '-5px 5px 15px -5px rgba(0,0,0,0.25)' }}>
-              <Text style={{ textAlign: 'center', marginBottom: 10 }}>
+            <View style={{ alignItems: 'center', width: 125, height: 125, borderRadius: 20, boxShadow: '0px 0px 5px 1px rgba(0, 0,  0, 0.25)' }}>
+              <Text style={{ textAlign: 'center', marginTop: 10, fontWeight: 'bold', color: corTercearia }}>
                 Esporte e Lazer
               </Text>
 
-              <Image source={ esporte } style={{ width: 70, height: 70 }}></Image>
+              <Image source={ esporte } style={{ width: '50%', height: '50%' }}></Image>
             </View>
 
-            <View style={{ justifyContent: 'center', alignItems: 'center', width: 125, height: 125, borderRadius: 20, boxShadow: '-5px 5px 15px -5px rgba(0,0,0,0.25)' }}>
-              <Text style={{ textAlign: 'center', marginBottom: 10 }}>
+            <View style={{ justifyContent: 'space-between', alignItems: 'center', width: 125, height: 125, borderRadius: 20, boxShadow: '0px 0px 5px 1px rgba(0, 0,  0, 0.25)' }}>
+              <Text style={{ textAlign: 'center', marginTop: 10, fontWeight: 'bold', color: corTercearia }}>
                 Habitação e Moradia
               </Text>
 
-              <Image source={ habitacao } style={{ width: 70, height: 70 }}></Image>
+              <Image source={ habitacao } style={{ width: '50%', height: '50%', marginBottom: 10 }}></Image>
             </View>
           </View>
         </View>

@@ -32,8 +32,9 @@ function App() {
 
         <Text style={ estilos.cabSubTitulo }>Fundamentos III</Text>
       </View> */}
-      <Cabecalho />
+      <Cabecalho img="https://hololive.hololivepro.com/wp-content/uploads/2024/06/JusticeKV.png"/>
       {/* Chamando o componente cabeçalho, com uma tag hibrida, de abertura e fechamento. */}
+      {/* Criando parâmetros, pra que os itens tenham conteúdo e atributos diferentes, ainda não sei como fazer isso funcionar junto com a folha de estilo externa. */}
 
       {/* <View id="conteudo" style={ estilos.conteudo }>
         <Text>Conteúdo</Text>
@@ -45,7 +46,7 @@ function App() {
 
         <Text style={ estilos.rodAutor }>{data}</Text>
       </View> */}
-      <Rodape />
+      <Rodape autor="Sanallite" data="20 de junho"/>
     </View>
   )
 }

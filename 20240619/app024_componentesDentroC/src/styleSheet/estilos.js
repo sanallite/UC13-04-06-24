@@ -50,6 +50,13 @@ const estilos = StyleSheet.create({
         flex: 0.65
     },
 
+    contTexto: {
+        backgroundColor: 'blue',
+        marginTop: 10,
+        height: 100,
+        width: '100%'
+    },
+
     /* View do rodapé */
     rodape: {
         flex: 0.15,
