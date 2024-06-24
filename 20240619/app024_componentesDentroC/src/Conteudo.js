@@ -15,6 +15,8 @@ function Conteudo() {
     let arrayCorFundo = ["antiquewhite", "gray", "lightblue", "orange", "red", "yellow"];
     let arrayAltura = ["100", "70", "60", "65", "50", "51"];
     let arrayLargura = ["80%", "30%", "50%", "100%", "88%", "22%"];
+    let arrayImgs = [ require("../img/gura.png"), require('../img/fuwawa.webp'), require('../img/fauna.png'), require('../img/bijou.webp'), require('../img/baelz.png'), require('../img/ame.png')];
+    let arraySubtitulos = ["Primeiro", "Segundo", "Terceiro", "Quarto", "Quinto", "Sexto"];
     /* Colocando nossos dados em vetores. */
 
     let itemConteudo = [];
@@ -22,7 +24,7 @@ function Conteudo() {
 
     for ( let i = 0; i < arrayNomes.length; i++ ) {
         itemConteudo.push(
-            <ItensConteudo texto = {arrayNomes[i]} corFonte = {arrayCorFonte[i]} corFundo = {arrayCorFundo[i]} altura = {arrayAltura[i]} largura = {arrayLargura[i]}/>
+            <ItensConteudo texto = {arrayNomes[i]} corFonte = {arrayCorFonte[i]} corFundo = {arrayCorFundo[i]} altura = {arrayAltura[i]} largura = {arrayLargura[i]} img = {arrayImgs[i]} subt = {arraySubtitulos[i]}/>
         );
     }
     /* Enquanto o valor da variável i for menor que o número de indíces no vetor de nomes, será inserido no vetor de itens de conteúdo a chamada do componente externo com seus parâmetros específicos. */
