@@ -7,10 +7,13 @@ import { estilos } from './estilos';
 function ItensCorpo(props) {
     let titulo = props.titulo;
     let estilo = props.style;
+    let imagem = props.img;
     let subtitulo = props.subtitulo;
 
     return (
         <View style={ estilo }>
+            <Image source={ imagem } style={ estilos.iconesDestaque }></Image>
+
             <Text>
                 {titulo}
             </Text>

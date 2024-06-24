@@ -25,8 +25,10 @@ const estilos = StyleSheet.create({
         flex: 1,
         backgroundColor: 'powderblue',
         margin: 10,
-        justifyContent: 'center',
-        padding: '1em'
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        padding: '1em',
+        flexDirection: 'row'
     }, 
 
     destaquePlus: {
@@ -35,7 +37,13 @@ const estilos = StyleSheet.create({
         margin: 10,
         justifyContent: 'center',
         padding: '1em'
-    }, 
+    },
+
+    iconesDestaque: {
+        width: 60,
+        height: 60,
+        resizeMode: 'contain'
+    },
 
     conteudo: {
         flex: 1,
