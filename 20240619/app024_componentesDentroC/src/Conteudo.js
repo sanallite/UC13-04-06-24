@@ -16,7 +16,7 @@ function Conteudo() {
     let arrayAltura = ["100", "70", "60", "65", "50", "51"];
     let arrayLargura = ["80%", "30%", "50%", "100%", "88%", "22%"];
     let arrayImgs = [ require("../img/gura.png"), require('../img/fuwawa.webp'), require('../img/fauna.png'), require('../img/bijou.webp'), require('../img/baelz.png'), require('../img/ame.png')];
-    let arraySubtitulos = ["Primeiro", "Segundo", "Terceiro", "Quarto", "Quinto", "Sexto"];
+    let arraySubtitulos = ["Primeiro texto", "Segundo texto", "Terceiro texto", "Quarto texto", "Quinto texto", "Sexto texto"];
     /* Colocando nossos dados em vetores. */
 
     let itemConteudo = [];

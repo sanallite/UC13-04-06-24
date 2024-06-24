@@ -16,7 +16,7 @@ function ItensConteudo(props) {
     /* Criando parâmetros, pra que os itens tenham conteúdo e atributos diferentes, ainda não sei como fazer isso funcionar junto com a folha de estilo externa. */
 
     return (
-        <View style={{ backgroundColor: corFundo, height: altura, width: largura, marginTop: 10 }}>
+        <View style={{ backgroundColor: corFundo, height: altura, width: largura, marginTop: 10, flexDirection: 'row', justifyContent: 'space-around' }}>
             <Image source={ imagem } style={{ width: 50, height: 50, borderRadius: '50%', borderColor: 'red', borderWidth: 3 }}></Image>
             <Text style={{ color: corFonte }}>{texto}</Text>
             <Text>{subtitulo}</Text>
