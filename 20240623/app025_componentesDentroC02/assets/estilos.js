@@ -18,7 +18,8 @@ const estilos = StyleSheet.create({
     },
 
     corpo: {
-        flex: 0.75
+        flex: 0.75,
+        paddingHorizontal: 5
     },
 
     destaque: {
@@ -29,7 +30,8 @@ const estilos = StyleSheet.create({
         /* justifyContent: 'space-between', */
         padding: '0.5em',
         flexDirection: 'row',
-        borderRadius: 10
+        borderRadius: 10,
+        boxShadow: 'rgba(0, 0, 0, 0.16) 0px 10px 16px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px',
     },
 
     destaqueLadoEsquerdo: {
@@ -53,7 +55,8 @@ const estilos = StyleSheet.create({
         justifyContent: 'center',
         padding: '0.5em',
         flexDirection: 'row',
-        borderRadius: 10
+        borderRadius: 10,
+        boxShadow: 'rgba(0, 0, 0, 0.16) 0px 10px 16px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px',
     },
 
     iconesDestaque: {
@@ -79,10 +82,8 @@ const estilos = StyleSheet.create({
         borderTopRightRadius: 10,
         borderBottomRightRadius: 10,
         borderLeftWidth: 10,
-        borderTopWidth: 1,
-        borderBottomWidth: 1,
-        borderRightWidth: 1,
-        padding: '0.5em'
+        padding: '0.5em',
+        boxShadow: 'rgba(0, 0, 0, 0.16) 0px 10px 16px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px',
     },
 
     imagemItemConteudo: {
