@@ -7,6 +7,7 @@ import { estilos } from './estilos'
 function Cabecalho() {
     let doutorImg = require('../img/img1.png');
     let carterinhaImg = require('../img/img2.png');
+    let nome = "Márcio Rodriguês Teodoro";
 
     return (
         <View id="View2" style={ estilos.cabecalho }>
@@ -15,7 +16,7 @@ function Cabecalho() {
             <View id="View5" style={{ flexDirection: 'row', alignItems: 'center' }}>
             <Image source={ doutorImg } style={{ width: 50, height: 50 }}></Image>
 
-            <Text style={{ paddingLeft: 15 }}>Nome Sobrenome</Text>
+            <Text style={{ paddingLeft: 15 }}>{nome}</Text>
             </View>
 
             <Image source={ carterinhaImg } style={{ width: 18, height: 24, resizeMode: 'contain' }}></Image>
