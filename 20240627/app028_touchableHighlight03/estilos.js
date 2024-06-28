@@ -45,7 +45,30 @@ const estilos = StyleSheet.create({
 
     nomeBotoesRP: {
         color: "lightgray"
-    }
+    },
+
+    itensServicos: {
+        width: 120,
+        height: 120,
+        justifyContent: 'space-between',
+        borderRadius: 20,
+        alignItems: 'center',
+        padding: 10,
+        boxShadow: '0px 0px 5px 1px rgba(0, 0,  0, 0.25)'
+    },
+
+    linhaServicos: {
+        marginHorizontal: 10,
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        marginBottom: 10
+    },
+
+    nomeServico: {
+        textAlign: 'left',
+        fontWeight: 'bold',
+        color: "darkblue",
+    },
 })
 
 export { estilos }

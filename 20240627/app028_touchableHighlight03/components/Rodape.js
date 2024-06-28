@@ -6,7 +6,15 @@ import { estilos } from '../estilos';
 
 function botaoInicio() {
     alert("Você quer voltar para a página inícial?")
-  }
+}
+
+function botaoNotifi() {
+    alert("Talvez você tenha novas mensagens")
+}
+
+function botaoConfig() {
+    alert("Personalize seu aplicativo")
+}
 
 function Rodape() {
     let botoes = ["Notificações", "Início", "Configurações"];
@@ -18,11 +26,11 @@ function Rodape() {
 
     return (
         <View style={ estilos.rodape }>
-            <View style={ estilos.botoesRodape }>
+            <Pressable style={ estilos.botoesRodape } onPress={ botaoNotifi }>
                 <Image source={ iconeBotoes[0] } style={{ width: 25, height: 30 }}></Image>
 
                 <Text style={ estilos.nomeBotoesRP }>{botoes[0]}</Text>
-            </View>
+            </Pressable>
             
             <Pressable style={ estilos.botoesRodape } onPress={ botaoInicio } >
                 <Image source={ iconeBotoes[1] } style={{ width: 35, height: 30 }}></Image>
@@ -30,11 +38,11 @@ function Rodape() {
                 <Text style={{ color: "#43b941" }}>{botoes[1]}</Text>
             </Pressable>
 
-            <View style={ estilos.botoesRodape }>
+            <Pressable style={ estilos.botoesRodape } onPress={ botaoConfig }>
                 <Image source={ iconeBotoes[2] } style={{ width: 30 , height: 30}}></Image>
 
                 <Text style={ estilos.nomeBotoesRP }>{botoes[2]}</Text>
-            </View>
+            </Pressable>
         </View>
     )
 }
