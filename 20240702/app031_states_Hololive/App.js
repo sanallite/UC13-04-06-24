@@ -1,20 +1,34 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+/* Aula 12 - Meu desafio usando states */
 
-export default function App() {
+import React from 'react';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
+
+function App() {
+  let talentos = [
+    { nome: "Gawr Gura", imagem: '' },
+    { nome: "Ninomae Ina'nis", imagem: '' },
+  ];
+  /* Criando objetos dentro do vetor para armazenar as personagens */
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View>
+      <View>
+        <Text>Hololive English</Text>
+        <Text>Qual talento você ganhou?</Text>
+      </View>
+
+      <View>
+        <Image></Image>
+        <Text>Nome</Text>
+      </View>
+
+      <View>
+        <TouchableOpacity>
+          <Text>Jogar</Text>
+        </TouchableOpacity>
+      </View>
     </View>
-  );
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
