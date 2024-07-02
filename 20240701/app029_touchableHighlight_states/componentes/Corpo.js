@@ -13,7 +13,7 @@ function Corpo() {
     const [ enunciado, setEnunciado ] = useState('Clique no botão para trocar a cor de fundo!');
     const [ descricao, setDescricao ] = useState('');
     const [ corFundo, setCorFundo ] = useState('orange');
-    /* Criando uma constante que contém uma variável e uma função, essa constante utiliza o método useState com um valor passado por parâmetro, esses valores nos parâmetros serão o estado inicial do conteúdo da página, que será armazenado nas variáveis e alterado pelas funções. */
+    /* Criando constantes que contêm uma variável e uma função, essas constantes utilizam o método useState com um valor passado por parâmetro, esses valores nos parâmetros serão o estado inicial do conteúdo da página, que serão armazenados nas variáveis e alterado pelas funções. */
 
     function alterarDescricao() {
         if ( corFundo == "orange" ) {
