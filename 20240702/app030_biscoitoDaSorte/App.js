@@ -1,4 +1,4 @@
-/* Aula 12 - App Biscoito da Sorte */
+/* Aula 12 - Componentes de Interface, App Biscoito da Sorte */
 
 import React, { useState } from 'react';
 import { View, Image, Text, TouchableOpacity } from 'react-native';

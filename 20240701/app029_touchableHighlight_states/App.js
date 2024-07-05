@@ -1,4 +1,4 @@
-/* Aula 11 - Touchable Highlight, States */
+/* Aula 11 - Componentes de Interface, Touchable Highlight, States */
 
 import React from 'react';
 import { View } from 'react-native';

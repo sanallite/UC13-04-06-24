@@ -1,4 +1,4 @@
-/* Aula 12 - Meu desafio usando states */
+/* Aula 12 - Meu desafio usando variáveis de estado */
 
 import React, { useState } from 'react';
 import { styles } from './estilos';
@@ -59,12 +59,14 @@ function App() {
       /* Adicionando 1 ao item atual do array cópia, que é o item correspondente do array de talentos */
 
       setContador(novaSelecao);
+      /* Definindo a variável do contador como o array que foi atualizado. */
     }
 
     else {
       setTextoBotao('Jogar');
       setNome('Venha, temos um sonho para realizar');
       setImagem( require('./img/yagoo.jpg') );
+      /* Retornando ao estado inicial */
     }
   }
   
@@ -106,6 +108,7 @@ function App() {
             </Text>
           )}
         />
+        {/* Lista que pega os dados do array do contador, definindo uma chave única como string, que no caso é o atributo nome dos items do array e então renderizando na tela todos os itens dentro de um componente Text, onde o parâmetro item vai ser o valor e o index o índice do item. */}
       </View>
     </ScrollView>
   )
