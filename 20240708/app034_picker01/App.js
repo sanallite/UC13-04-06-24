@@ -1,11 +1,16 @@
 /* Aula 14 - Componentes de Interface, Picker */
 
 import React, { useState } from 'react';
+import Cabecalho from './componentes/Cabecalho';
+import Conteudo from './componentes/Conteudo';
+import Rodape from './componentes/Rodape';
+/* Importando os componentes que eu criei */
+
 import { Picker } from '@react-native-picker/picker';
 /* Importando o componente que foi instalado manualmente */
 
 import { View, Text, Image, TextInput, Pressable, StyleSheet } from 'react-native';
-/* Importando todos os componentes nativos que vamos usar */
+/* Importando todos os componentes nativos que vamos usar, antes da componentização */
 
 let corPrimaria = "#1653f5";
 let corSecundaria = "#f5b816";
@@ -99,8 +104,11 @@ const estilos = StyleSheet.create({
   }
 })
 
+export { estilos };
+/* Exportando a folha de estilo, mesmo estando no arquivo principal do app. */
+
 function App() {
-  let logo1 = require('./assets/logo1.png');
+  /* let logo1 = require('./assets/logo1.png');
   let logo2 = require('./assets/logo2.png');
 
   let titulo = "Componente Picker";
@@ -114,49 +122,15 @@ function App() {
   function verifica() {
     alert("Olá");
   }
+  Conteúdo que foi para os componentes */
 
   return (
     <View style={{ flex: 1, backgroundColor: corPrimaria }}>
-      <View id="cabeçalho" style={ estilos.cabecalho }>
-        <Image source = { logo1 } style={ estilos.logoCab } resizeMode='contain' ></Image>
-        <Text style={ estilos.titulo }>{titulo}</Text>
-      </View>
+      <Cabecalho />
 
-      <View id="conteudo" style={ estilos.conteudo }>
-        <Text style={ estilos.textoConteudo }>{textoConteudo}</Text>
+      <Conteudo />
 
-        <Text style={[ estilos.textoConteudo, estilos.textosInputPicker ]}>{textoInput}</Text>
-
-        <TextInput style={ estilos.textInput }></TextInput>
-        {/* Caixa de texto com as props padrão */}
-
-        <Text style={[ estilos.textoConteudo, estilos.textosInputPicker ]}>{textoPicker}</Text>
-
-        <Picker style={ estilos.picker }>
-          <Picker.Item label = "Selecione..."  value = "Selecione" />
-          <Picker.Item label = "Linguagem Java"  value = "Java" />
-          <Picker.Item label = "Linguagem Javascript"  value = "JS" />
-          <Picker.Item label = "Linguagem PHP"  value = "PHP" />
-          {/* Itens de seleção, não esqueça de colocar com I maiúsculo. Todos os itens precisam ter um label e um valor, como os options do html */}
-        </Picker>
-
-        <View style={{ alignItems: 'center' }}>
-          <Pressable onPress = {verifica} style={ estilos.botao }>
-            <Text style={ estilos.textoBotao }>{textoPress}</Text>
-          </Pressable>
-          {/* Ou Touchable Highlight */}
-        </View>
-      </View>
-
-      <View id="rodape" style={ estilos.rodape }>
-        <View style={ estilos.logoAutor }>
-          <Image source={ logo2 } style={ estilos.logoRod } resizeMode='contain'></Image>
-
-          <Text style={[ estilos.autorData, { marginLeft: 10 } ]}>{autor}</Text>
-        </View>
-
-        <Text style={ estilos.autorData }>{data}</Text>
-      </View>
+      <Rodape />
     </View>
   )
 }
