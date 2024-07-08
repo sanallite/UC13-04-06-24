@@ -14,30 +14,30 @@ function CaixasTexto(props) {
     let multi = props.multi;
     /* Pegando as propriedades por parâmetro */
 
-    if ( edit  === 'true' ) {
+    /* if ( edit  === 'true' ) {
         edit = true;
-    }
-    /* Convertendo as strings em booleanos só por garantia */
+    } */
+    /* Convertendo as strings em booleanos só por garantia, não mais necessário com o uso do array. */
 
-    else {
+   /*  else {
         edit = false;
-    }
+    } */
 
-    if ( secure  === 'true' ) {
+    /* if ( secure  === 'true' ) {
         secure  = true;
-    }
+    } */
 
-    else {
+    /* else {
         secure = false;
-    }
+    } */
 
-    if ( multi === 'true' ) {
+    /* if ( multi === 'true' ) {
         multi = true;
-    }
+    } */
 
-    else {
+    /* else {
         multi = false
-    }
+    } */
 
     return (
         <TextInput placeholder={ place } maxLength={ limit } autoCapitalize={ caps } inputMode={ keyboard } readOnly={ edit }  multiline={ multi } secureTextEntry={ secure } style={ estilos.caixaTexto }>
