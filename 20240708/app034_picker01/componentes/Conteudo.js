@@ -9,16 +9,16 @@ import { Picker } from '@react-native-picker/picker';
 
 import { estilos } from '../App';
 
-function verifica() {
-    alert("Olá");
-}
-
 function Conteudo() {
     const [ corFundoInput, setCorFundoI ] = useState('#f5b816');
     /* Variável de estado para a cor de fundo da caixa de texto */
 
     const [ corFundoPicker, setCorFundoP ] = useState('#f5b816');
     /* Variável de estado para a cor de fundo do selecionador */
+
+    const [ itemSelecionado, setItemSelec ] = useState('Selecione');
+    const [ nome, setNome ] = useState('');
+    /* Variáveis de estado para armazenar o item selecionado e o nome */
 
     const alterarCor = (p) => {
         if ( p === "input" ) {
@@ -52,6 +52,30 @@ function Conteudo() {
         // }
     }
 
+    function alteraNome(nome_digitado) {
+        setNome(nome_digitado);
+    }
+
+    function trocarItemSelec(item_index) {
+        setItemSelec(item_index);
+    }
+
+    function verifica() {
+        if ( nome != '' ) {
+            if ( itemSelecionado != 'Selecione' ) {
+                alert("Olá, " +nome+ "! Você escolheu a Linguagem: " +itemSelecionado);
+            }
+
+            else {
+                alert(nome+ ", por favor selecione um item.");
+            }
+        }
+
+        else {
+            alert("Olá, digite um nome na caixa texto.");
+        }
+    }
+
     let textoConteudo = "No mundo do React Native, o componente Picker (selecionador) se refere a um componente que permite ao usuário escolher entre um conjunto de opções. \n\nVerifique o exemplo abaixo:";
     let textoInput = "Digite seu nome:";
     let textoPicker = "Escolha uma das opções abaixo:";
@@ -63,12 +87,12 @@ function Conteudo() {
 
             <Text style={[ estilos.textoConteudo, estilos.textosInputPicker ]}>{textoInput}</Text>
 
-            <TextInput style={[ estilos.textInput, { backgroundColor: corFundoInput } ]} onFocus={ () => alterarCor('input') } onBlur={ () => restaurarCor('input') } ></TextInput>
+            <TextInput style={[ estilos.textInput, { backgroundColor: corFundoInput } ]} onFocus={ () => alterarCor('input') } onBlur={ () => restaurarCor('input') } value={ nome } onChangeText={ alteraNome } ></TextInput>
             {/* Caixa de texto com as props padrão */}
 
             <Text style={[ estilos.textoConteudo, estilos.textosInputPicker ]}>{textoPicker}</Text>
 
-            <Picker style={[ estilos.picker, { backgroundColor: corFundoPicker } ]} onFocus={ () => alterarCor('picker') } onBlur={ () => restaurarCor('picker') } >
+            <Picker style={[ estilos.picker, { backgroundColor: corFundoPicker } ]} onFocus={ () => alterarCor('picker') } onBlur={ () => restaurarCor('picker') } selectedValue={ itemSelecionado } onValueChange={ trocarItemSelec }>
             {/* Usando uma função aero que chama outra função com um valor passado por parâmetro */}
 
                 <Picker.Item label = "Selecione..."  value = "Selecione" />

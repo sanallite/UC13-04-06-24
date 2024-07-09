@@ -1,0 +1,21 @@
+Aula 14 - Componentes de interface, Picker - Explicando como funciona o componente Conteudo
+
+Linhas 3 a 10: Primeiro é necessário importar o componente Picker, que deve ser instalado manualmente, além dos componentes nativos que vão ser usados, incluindo o método useState.
+
+Linhas 13 a 21: Criando variáveis de estado para armazenar as cores de fundo dos componentes TextInput e Picker, o item selecionado e o nome digitado na caixa de texto.
+
+Linhas 23 a 53: Criando constantes que armazenam funções aero que recebem um valor por parâmetro, esse valor representa o componente que deve ter a cor de fundo alterada, com uma verificação que caso seja verdadeira altera a cor do componente selecionado, através do método da variável de estado. Caso seja falsa define o valor inicial de cor para os dois componentes. Na função de restaurar cor os parâmetros não estão sendo usados, com a função apenas atualizando a cor de fundo atual para ser a inicial.
+
+Linhas 55 a 77: Funções para alterar o nome e o item selecionado armazenados nas variáveis de estado para o valor que foi passado por parâmetro. Depois a função "verifica" usa a condicional if para ver se o nome, que está armazenado na variável de estado, não está vazio e se caso não estiver então verifica se o item selecionado, também vindo da variável de estado, não é o primeiro, chamado Selecione, nesse caso então exibirá um alerta com o nome e o item selecionado escritos.
+
+linhas 79 a 82: Variáveis para armazenar os textos exibidos na tela.
+
+Linha 90: TextInput com um array na props de estilo, chamando um item da const de estilos externa e outro definindo em linha a cor de fundo como a cor armazenada na variável de estado criada na linha 13. O método onFocus chama uma função aero que chama a função de alterar cor, criada na linha 23, enviando por parâmetro uma string que indica qual é o componente. O método onBlur atua da mesma forma, mas chamando a função de restaurar a cor, criada na linha 39. O valor foi definido como o valor da variável de estado "nome", que está vazio. O método onChangeText chama a função de alterar o nome a cada mudança feita no texto, com o valor passado por parâmetro automáticamente sendo o texto que foi digitado.
+
+Linha 95: Picker também com dois itens de estilo, um externo e outro em linha, com o último alterando a cor conforme a variável de estado. Os métodos onFocus e onBlur atuam da mesma forma que no TextInput, chamando uma função aero para alterar o estado da variável. A propriedade selectedValue é o valor que é selecionado por padrão, que nesse caso é o item com índice "Selecione", que foi armazenado na variável de estado na linha 19. O método onValueChange a cada vez que um item for selecionado, chama a função que troca o valor armazenado na variável "itemSelecionado" para o índice do item atual, que também é enviado automáticamente por parâmetro.
+
+Linhas 98 a 101: As opções selecionáveis do Picker, com seus rótulos e valores.
+
+Linhas 105 a 110: Componente pressionável que através do método onPress chama a função criada na linha 63, que exibe alertas na tela conforme as condições definidas.
+
+Linha 115: Exportando o componente para ele poder ser usado na função príncipal App.
