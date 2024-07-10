@@ -1,7 +1,7 @@
 /* Aula 14 - Meu desafio usando Picker */
 
 import React from 'react';
-import { View, Text, Image } from 'react-native';
+import { ScrollView, View, Text, Image } from 'react-native';
 import { style } from './StyleSheet';
 import Conteudo from './components/Conteudo'
 
@@ -10,14 +10,14 @@ function App() {
   let logo = require('./assets/mercado.png');
 
   return (
-    <View style={{ flex: 1 }}>
-      <View>
+    <ScrollView style={{ flex: 1 }}>
+      <View style={ style.cabecalho }>
         <Image source={ logo } resizeMode='contain' style={ style.logo } ></Image>
-        <Text>{titulo}</Text>
+        <Text style={ style.titulo }>{titulo}</Text>
       </View>
 
       <Conteudo />
-    </View>
+    </ScrollView>
   )
 }
 
