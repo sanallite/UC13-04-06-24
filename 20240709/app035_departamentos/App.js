@@ -1,20 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+/* Aula 14 - Meu desafio usando Picker */
 
-export default function App() {
+import React from 'react';
+import { View, Text, Image } from 'react-native';
+import { style } from './StyleSheet';
+import Conteudo from './components/Conteudo'
+
+function App() {
+  let titulo = "Departamentos do Mercado";
+  let logo = require('./assets/mercado.png');
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={{ flex: 1 }}>
+      <View>
+        <Image source={ logo } resizeMode='contain' style={ style.logo } ></Image>
+        <Text>{titulo}</Text>
+      </View>
+
+      <Conteudo />
     </View>
-  );
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
