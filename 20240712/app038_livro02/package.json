@@ -1,5 +1,5 @@
 {
-  "name": "app038_livro",
+  "name": "app038_livro02",
   "version": "1.0.0",
   "main": "expo/AppEntry.js",
   "scripts": {
@@ -16,7 +16,7 @@
     "react-native-web": "~0.19.10",
     "react-dom": "18.2.0",
     "@expo/metro-runtime": "~3.2.1",
-    "@react-native-community/slider": "https://github.com/react-native-community/react-native-slider.git",
+    "@react-native-community/slider": "4.5.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
