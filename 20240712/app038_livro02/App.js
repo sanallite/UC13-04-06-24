@@ -101,7 +101,8 @@ const claro = StyleSheet.create({
   },
 
   textoSwitch: {
-    marginRight: 10
+    marginRight: 10,
+    fontFamily: 'Noto Serif'
   },
 
   introLivro: {
@@ -161,7 +162,8 @@ const escuro = StyleSheet.create({
 
   textoSwitch: {
     marginRight: 10,
-    color: 'white'
+    color: 'white',
+    fontFamily: 'Noto Serif'
   },
 
   introLivro: {
