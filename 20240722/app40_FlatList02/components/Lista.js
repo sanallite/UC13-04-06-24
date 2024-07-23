@@ -26,6 +26,7 @@ export default function Lista() {
 
         { nome: "Linha Verde", album: "Vem", lancamento: "2017", capa: "https://akamai.sscdn.co/letras/360x360/albuns/c/3/f/0/581711497273092.jpg", tem_clipe: false },
     ]
+    /* Array que armazena as músicas e seus atributos */
 
     function renderizar({item}) {
         let clipe;
@@ -37,6 +38,7 @@ export default function Lista() {
         else {
             clipe = "Não"
         }
+        /* Verificando se o atributo é verdadeiro ou falso e então definindo um valor para a variável, que será exibido na tela */
 
         return (
             <View style={ estilos.itemLista }>
@@ -59,10 +61,12 @@ export default function Lista() {
             </View>
         )
     }
+    /* Função chamada pela prop renderItem, que recebe os valores do item atual por parâmetro e exibe na tela todos os atributos do item */
 
     return (
         <ScrollView>
             <FlatList data={ musicas } keyExtractor={( item, index ) => musicas[index].nome } renderItem={ renderizar }/>
+            { /* Componente de lista que recebe os dados do array musicas, define como chave primária da lista o valor do atributo nome de cada item e chama uma função para renderizar na tela os componentes. Não sendo necessário estar dentro de uma ScrollView, pois o FlatList tem rolagem ativada por padrão */ }
         </ScrollView>
     )
 }
