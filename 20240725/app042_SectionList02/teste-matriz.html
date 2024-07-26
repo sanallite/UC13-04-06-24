@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset = "utf-8">
+        <title>Teste usando matrizes, vetores multi dimensionais</title>
+    </head>
+
+    <body>
+        <script>
+            let paises = [ [ 'Brasil', 'Japão' ], [ 'China', 'Alemanha', [ 'Taiwan', 'Hong Kong' ] ] ];
+
+            console.log(paises[1][0]);
+            /* Retornando o item que você quer, nesse caso o item com índice 0 do vetor que tem índice 1 */
+
+            console.log(paises[1][2]);
+            /* Retorna o array inteiro, que é item com índice 2 do vetor 1 */
+
+            console.log(paises[1][2][1]);
+            /* Retorna apenas o item com índice 0 do item 2 do vetor 1 */
+        </script>
+    </body>
+</html>

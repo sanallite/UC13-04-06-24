@@ -1,7 +1,8 @@
 /* Aula 18 - Componente SectionList, Desafio 2 - Componente da lista */
 
-import React from 'react';
-import { View, Text, SectionList, Pressable, Alert } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, SectionList, Pressable, ScrollView } from 'react-native';
+import { estilo } from '../estilos';
 
 export default function Lista() {
     const continentes = ['América do Norte', 'América Central', 'América do Sul', 'Europa', 'África', 'Ásia', 'Oceania'];
@@ -79,38 +80,63 @@ export default function Lista() {
             {nome: 'Nova Zelândia', capital: 'Wellington'} 
         ]
     ];
+    /* Matriz que armazena arrays com os países de cada continente */
 
-    const sessoes = continentes.map( (continente, index) => ({
+    const secoes = continentes.map( (continente, index) => ({
         title: continente,
         data: paises[index]
     }) );
+    /* Utilizando a função de mapear arrays, iterando sobre cada item, para executar uma função que recebe por parâmetro o item atual do array de continentes, junto com seu índice, e então criando objetos, dentro de um array, com os atributos title e data, que são necessários para criar uma SectionList, com o data sendo o item do array paises que tem o mesmo índice do continente. Essa função retorna os dados que ficam armazenados na constante, que é chamada pela propriedade sections */
 
     const exibirContinentes = ({ section: { title } }) => (
         /* return ( */
-            <View>
-                <Text>{title}</Text>
+            <View style={ estilo.tituloSecao }>
+                <Text style={ estilo.nomeContinente }>{title}</Text>
             </View>
-        /* ) */
+        /* ) Trocando as chaves pelos parânteses faz a função imediatamente retornar um valor */
     )
-    /* Recebendo o atributo titulo da seção */
+    /* Extraindo o atributo title do objeto section, que é o objeto enviado pelo método renderSectionHeader. section não é uma variável de parâmetro, por isso não pode ter seu nome alterado, assim como o item, na constante de exibição dos países */
+
+    function exibirCont({section}) {
+        return (
+            <View>
+                <Text>{section.title}</Text>
+            </View>
+        )
+    }
+    /* Utilizando a função dessa forma também funciona, mas só se as seções da lista tiverem sido mapeadas corretamente.  */
 
     const exibirPaises = ({item}) => (
         /* return ( */
-            <View>
-                <Pressable onPress={ () => exibirCapitais(item) }>
+            <View style={ estilo.paises }>
+                <Pressable onPress={ () => exibirCapitais(item) } /* onFocus={ () => alterarFundo("pressionado") } onBlur={ () => alterarFundo("não_pressionado") } style={{ backgroundColor: corDeFoco }} */>
                     <Text>{item.nome}</Text>
                 </Pressable>
             </View>
         /* ) */
     )
-    /* Preste atenção no nome dos parâmetros! Alguns não funcionam se você mudar, nesse caso tem que chamar o item, que é um objeto, e enviar o item para a função abaixo, aí nessa função você escolhe o nome da variável que vai armazenar o valor. */
+    /* Preste atenção no nome dos parâmetros! Nesse caso tem que chamar o item, que é um objeto, não uma variável que armazena parâmetro, e enviar o item para a constante abaixo, aí nessa função você escolhe o nome da variável que vai armazenar o valor recebido, pois esse valor está sendo recebido da constante exibirPaises, não da data do SectionList */
 
     const exibirCapitais = (pais) => {
-        alert("Você clicou no país: " +pais.nome+ ", Sua capital é: " +pais.capital+ ".")
+        alert("Você clicou no país: " +pais.nome+ ", Sua capital é: " +pais.capital+ ".");
+
+        /* setCor('lightgreen'); */
     }
 
+    /* const [ corDeFoco, setCor ] = useState('lightblue');
+    Escute mais sobre como usar o useState em componentes criados por loops ou listas
+    const alterarFundo = (estado) => {
+        if ( estado == "pressionado" ) {
+            setCor('lightgreen');
+        }
+
+        else {
+            setCor('lightblue');
+        }
+    } */
+
     return (
-        <View>
+        <ScrollView>
             <SectionList
                 /* sections={[ { title: continentes[0], data: paises[0] }, 
                     { title: continentes[1], data: paises[1] },
@@ -120,16 +146,17 @@ export default function Lista() {
                     { title: continentes[5], data: paises[5]},
                     { title: continentes[6], data: paises[6]},
                     { title: continentes[7], data: paises[7]}
-                ]} */
+                ]} Meu mapeamento por essa forma não funcionou... */
 
-                sections={ sessoes }
+                sections={ secoes }
 
                 renderItem={ exibirPaises }
 
                 renderSectionHeader={ exibirContinentes }
 
                 keyExtractor={ (item, index) => item.nome + index }
+                /* Definindo como chave primária de cada item da seção como seu atributo nome e seu índice na seção */
             />
-        </View>
+        </ScrollView>
     )
 }
