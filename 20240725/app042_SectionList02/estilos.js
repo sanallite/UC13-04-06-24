@@ -34,6 +34,8 @@ export const estilo = StyleSheet.create({
         marginHorizontal: '1rem',
         marginVertical: '0.5rem',
         borderBottomColor: 'green',
-        borderBottomWidth: 1
+        borderBottomWidth: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-between'
     }
 })

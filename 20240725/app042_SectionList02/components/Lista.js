@@ -109,6 +109,8 @@ export default function Lista() {
     const exibirPaises = ({item}) => (
         /* return ( */
             <View style={ estilo.paises }>
+                {/* <Text>{item.capital}</Text> */}
+
                 <Pressable onPress={ () => exibirCapitais(item) } /* onFocus={ () => alterarFundo("pressionado") } onBlur={ () => alterarFundo("não_pressionado") } style={{ backgroundColor: corDeFoco }} */>
                     <Text>{item.nome}</Text>
                 </Pressable>
