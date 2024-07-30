@@ -3,12 +3,17 @@
 import { StyleSheet } from 'react-native';
 
 export const estilos = StyleSheet.create({
-    fundo: { 
+    fundoPrincipal: { 
         flex: 1,
         backgroundColor: 'lightgray'
     },
 
-    tela_principal: {
+    fundoTelas: {
+        flex: 1,
+        backgroundColor: 'darkred'
+    },
+
+    telas: {
         flex: 1,
         margin: '1rem',
         borderTopLeftRadius: '1rem',
@@ -26,7 +31,7 @@ export const estilos = StyleSheet.create({
     },
 
     pressionaveis: {
-        borderColor: 'darkorange',
+        borderColor: 'darkred',
         padding: '0.625rem',
         borderRadius: '1rem',
         borderWidth: 2,
@@ -36,7 +41,7 @@ export const estilos = StyleSheet.create({
     },
 
     textoPress: {
-        color: 'darkorange'
+        color: 'darkred'
     },
 
     rodape: {
@@ -45,5 +50,54 @@ export const estilos = StyleSheet.create({
         padding: '1rem',
         borderColor: 'lightgray',
         borderTopWidth: 2
-    }
+    },
+
+    cabecalhoTelas: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        borderBottomColor: 'darkred',
+        borderBottomWidth: 2,
+        padding: '1rem'
+    },
+
+    capa_pagina: {
+        width: 150,
+        height: 100
+    },
+
+    nome_festa: {
+        color: 'darkred',
+        fontWeight: 'bold'
+    },
+
+    textoCuriosidades: {
+        fontSize: '1.2rem',
+        fontWeight: 'bold'
+    },
+
+    conteudo_telas: {
+        padding: '1rem'
+    },
+
+    titulos: {
+        color: 'darkred',
+        fontSize: '1.3rem'
+    },
+
+    textos_telas: {
+        marginVertical: '0.625rem'
+    },
+
+    images: {
+        width: 200,
+        height: 150
+    },
+
+    rodapeTelas: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        padding: '1rem',
+        borderColor: 'darkred',
+        borderTopWidth: 2
+    },
 })
