@@ -1,20 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+/* Aula 19 - Navegação de telas, Stack Navigation - Desafio 2 */
+
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+/* Importando as bibliotecas externas utilizadas para a navegação de telas, com o contâiner criando automáticamente um header para as telas  */
+
+import Tela_Principal from './src/Tela_Principal';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+  const Stack = createNativeStackNavigator();
+  /* Instânciando a função que adminstra a navegação em pilha pelas telas  */
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName='Tela_Principal'>
+        <Stack.Screen name='Tela_Principal' component={ Tela_Principal } />
+      </Stack.Navigator>
+    </NavigationContainer>
+    
+  )
+}
