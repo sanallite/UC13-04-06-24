@@ -22,8 +22,8 @@ export default function Tela_Principal() {
     return (
         <View style={ estilo.fundo }>
             <View style={ estilo.cabecalho }>
-                <Text>{titulo}</Text>
-                <Text>{descricao}</Text>
+                <Text style={{ fontSize: '2rem' }}>{titulo}</Text>
+                <Text style={{ fontSize: '1rem' }}>{descricao}</Text>
             </View>
 
             <View style={ estilo.opcoes }>

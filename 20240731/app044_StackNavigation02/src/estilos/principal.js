@@ -11,7 +11,8 @@ export const estilo = StyleSheet.create({
     cabecalho: {
         alignItems: 'center',
         backgroundColor: 'lightblue',
-        padding: '0.5rem'
+        padding: '1rem',
+        marginBottom: '0.5rem'
     },
 
     opcoes: {
