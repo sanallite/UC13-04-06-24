@@ -9,6 +9,7 @@ import Tela_Principal from './src/Tela_Principal';
 import FlatList from './src/FlatList';
 import UseState from './src/UseState';
 import Switch_Slider from './src/Switch_Slider';
+import Picker from './src/Picker';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -24,6 +25,8 @@ export default function App() {
         <Stack.Screen name='UseState' component={ UseState } options={{ title: 'Jogo das Idols' }} />
         
         <Stack.Screen name='Switch_Slider' component={ Switch_Slider } options={{ title: 'Livro' }} />
+
+        <Stack.Screen name='Picker' component={ Picker } options={{ title: 'Departamentos' }} />
       </Stack.Navigator>
     </NavigationContainer>
     
