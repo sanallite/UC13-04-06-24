@@ -12,10 +12,12 @@ export default function Principal() {
     const mudarTela = (caminho) => {
         if ( caminho === 'voltar' ) {
             Nav.goBack();
+            /* Método que retorna pra tela anterior na pilha, que foi definida no arquivo App, mas sem uso nessa tela. */
         }
 
         else if ( caminho === 'avancar' ) {
-            Nav.navigate('Um')
+            Nav.navigate('Um');
+            /* Método que navega pela tela especificada pelo nome */
         }
     }
 
@@ -29,6 +31,7 @@ export default function Principal() {
                 <Pressable style={ estilo.botao } onPress={ () => mudarTela('avancar') }>
                     <Text style={{ color: 'white' }}>Clique Aqui</Text>
                 </Pressable>
+                {/* Cada vez que o componente for pressionado, uma função será chamada para mudar a tela exibida de acordo com o parâmetro enviado */}
             </View>
         </View>
     )

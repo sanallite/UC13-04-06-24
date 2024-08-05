@@ -13,15 +13,20 @@ import ZeroTres from './telas/ZeroTres';
 
 export default function App() {
   const pilha = createNativeStackNavigator();
+  /* Constante que recebe um objeto que contém os componentes e atributos usados para fazer a navegação de telas */
 
   return (
-    <NavigationContainer>
-      <pilha.Navigator initialRouteName='Principal'>
-        <pilha.Screen component={ Principal } name='Principal'/>
-        <pilha.Screen component={ ZeroUm } name='Um' />
-        <pilha.Screen component={ ZeroDois } name='Dois' />
-        <pilha.Screen component={ ZeroTres } name='Três'/>
-      </pilha.Navigator>
-    </NavigationContainer>
+      <NavigationContainer>
+          <pilha.Navigator initialRouteName='Principal'>
+              <pilha.Screen component={ Principal } name='Principal' options={{ title: 'Bem Vindo' }} />
+              {/* O name indica o nome dessa tela para a navegação, já o title é apenas o título exibido no header, pesquise mais sobre os atributos do NativeStackNavigator */}
+
+              <pilha.Screen component={ ZeroUm } name='Um' />
+              <pilha.Screen component={ ZeroDois } name='Dois' />
+              <pilha.Screen component={ ZeroTres } name='Três'/>
+          </pilha.Navigator>
+          {/* Como o valor da constante retorna um componente, não é necessário nomea-lá com a primeira letra maiuscula, mas ainda é uma boa prática. */}
+      </NavigationContainer>
+      /* O navigator precisa estar envenvolido por um navigation contâiner, e uma screen precisa estar envolvida por um navigator */
   )
 }
