@@ -4,11 +4,12 @@ import { StyleSheet } from 'react-native';
 
 export const estilo = StyleSheet.create({
     fundo: {
-        flex: 1
+        flex: 1,
+        backgroundColor: 'white'
     },
 
     banner: {
-        alignItems: 'center'
+        alignItems: 'center', 
     },
 
     imagem: {
@@ -16,8 +17,7 @@ export const estilo = StyleSheet.create({
         height: 240
     },
 
-    viewPrincipal: {
-        height: '20%',
+    viewPrincipal: {     
         padding: '2rem'
     },
 
@@ -40,7 +40,7 @@ export const estilo = StyleSheet.create({
     pressionaveis: {
         padding: '1rem',
         borderRadius: 25,
-        width: '30%',
+        width: '40%',
         marginHorizontal: '0.625rem'
     },
 

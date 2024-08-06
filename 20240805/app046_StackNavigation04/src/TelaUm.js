@@ -8,6 +8,6 @@ import ConteudoTelas from './ConteudoTelas';
 
 export default function TelaUm() {
     return (
-        <ConteudoTelas titulo = 'Bem Vindo(a) ao Aplicativo Barilife!' imagem = { require('./img/bari_um.png') } texto = 'A Sociedade Brasileira de Cirurgia Bariátrica e Metabólica (SBCBM) desenvolveu o aplicativo pensando em você, paciente bariátrico. É um aplicativo inovador e gratuito.' />
+        <ConteudoTelas titulo = 'Bem Vindo(a) ao Aplicativo Barilife!' imagem = { require('./img/bari_um.png') } texto = 'A Sociedade Brasileira de Cirurgia Bariátrica e Metabólica (SBCBM) desenvolveu o aplicativo pensando em você, paciente bariátrico. É um aplicativo inovador e gratuito.' proximaTela = "TelaDois" telaInicial />
     )
 }

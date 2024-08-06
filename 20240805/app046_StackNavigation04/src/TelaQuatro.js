@@ -3,12 +3,11 @@
 import React from 'react';
 import { View, Text, Image, Pressable } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { estilo } from './estilos'
+import { estilo } from './estilos';
+import ConteudoTelas from './ConteudoTelas';
 
 export default function TelaQuatro() {
     return (
-        <View style={ estilo.fundo }>
-            
-        </View>
+        <ConteudoTelas titulo = "Uma experiência personalizada para você" texto = "Identifique-se abaixo selecionando o seu perfil como profissional médico ou paciente. Acesse um conteúdo personalizado." imagem = { require('./img/bari_quatro.png') } telaFinal />
     )
 }

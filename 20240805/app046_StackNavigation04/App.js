@@ -6,9 +6,26 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 /* import { estilo } from './src/estilos.js' */
 
 import TelaUm from './src/TelaUm';
+import TelaDois from './src/TelaDois';
+import TelaTres from './src/TelaTres';
+import TelaQuatro from './src/TelaQuatro';
 
 export default function App() {
+  const Stack = createNativeStackNavigator();
+
   return (
-    <TelaUm />
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName='TelaUm' >
+        <Stack.Screen name = "TelaUm" component={ TelaUm } />
+
+        <Stack.Screen name = "TelaDois" component={ TelaDois } />
+
+        <Stack.Screen name = "TelaTres" component={ TelaTres } />
+        
+        <Stack.Screen name = "TelaQuatro" component={ TelaQuatro } />
+        {/* Não esqueça da diferença entre name e title! */}
+        
+      </Stack.Navigator>
+    </NavigationContainer>
   )
 }
