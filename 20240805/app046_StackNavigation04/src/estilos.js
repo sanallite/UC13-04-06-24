@@ -57,5 +57,31 @@ export const estilo = StyleSheet.create({
 
     proximo: {
         backgroundColor: 'rgb(48, 111, 225)',
+    },
+
+    cabecalhoPaciente_Medico: {
+        padding: '1rem',
+        /* marginHorizontal: '0.625rem', */
+    },
+
+    tituloPaciente_Medico: {
+        fontWeight: 'bold',
+        fontSize: '1.4rem',
+        color: 'rgb(100, 100, 100)'
+    },
+
+    conteudoPaciente_Medico: {
+        flex: 1,
+        paddingHorizontal: '1rem',
+        paddingBottom: '1rem'
+    },
+
+    caixasTexto: {
+        borderWidth: 1,
+        padding: '0.625rem',
+        marginVertical: '0.625rem',
+        borderColor: 'rgb(200, 200, 200)',
+        borderRadius: 20,
+        color: 'rgb(48, 111, 225)'
     }
 })

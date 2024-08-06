@@ -9,13 +9,14 @@ import TelaUm from './src/TelaUm';
 import TelaDois from './src/TelaDois';
 import TelaTres from './src/TelaTres';
 import TelaQuatro from './src/TelaQuatro';
+import TelaPaciente from './src/TelaPaciente';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='TelaUm' >
+      <Stack.Navigator initialRouteName='TelaPaciente' >
         <Stack.Screen name = "TelaUm" component={ TelaUm } />
 
         <Stack.Screen name = "TelaDois" component={ TelaDois } />
@@ -24,7 +25,8 @@ export default function App() {
         
         <Stack.Screen name = "TelaQuatro" component={ TelaQuatro } />
         {/* Não esqueça da diferença entre name e title! */}
-        
+
+        <Stack.Screen name = "TelaPaciente" component={ TelaPaciente } />
       </Stack.Navigator>
     </NavigationContainer>
   )
