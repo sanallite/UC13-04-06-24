@@ -61,8 +61,8 @@ export const estilo = StyleSheet.create({
 
     cabecalhoPaciente_Medico: {
         padding: '1rem',
-        /* marginHorizontal: '0.625rem', */
     },
+    /* Não mais utilizado */
 
     tituloPaciente_Medico: {
         fontWeight: 'bold',
@@ -72,8 +72,7 @@ export const estilo = StyleSheet.create({
 
     conteudoPaciente_Medico: {
         flex: 1,
-        paddingHorizontal: '1rem',
-        paddingBottom: '1rem'
+        padding: '1rem'
     },
 
     caixasTexto: {
@@ -83,5 +82,26 @@ export const estilo = StyleSheet.create({
         borderColor: 'rgb(200, 200, 200)',
         borderRadius: 20,
         color: 'rgb(48, 111, 225)'
+    },
+
+    viewPicker: {
+        flexDirection: 'row',
+        justifyContent: 'space-between'
+    },
+
+    cadastrar_entrar: {
+        alignItems: 'center',
+        paddingVertical: '0.625rem'
+    },
+
+    voltarPaciente_Medico: {
+        alignItems: 'center',
+        padding: '1rem'
+    },
+
+    esqueci_senha: {
+        textAlign: 'center',
+        fontWeight: 'bold',
+        marginVertical: '1rem'
     }
 })

@@ -32,6 +32,18 @@ export default function ConteudoTelas(props) {
         else if ( escolha == 'avancar' ) {
             navegacao.navigate(proxima);
         }
+
+        else if ( escolha == 'paciente' ) {
+            navegacao.navigate('TelaPaciente');
+        }
+
+        else if ( escolha == 'medico' ) {
+            navegacao.navigate('TelaMedico');
+        }
+
+        else {
+            navegacao.navigate('TelaUm');
+        }
     }
 
     /* Essa variável não pode ser definida como constante, pois seu valor vai ser alterado de acordo com uma prop do componente */

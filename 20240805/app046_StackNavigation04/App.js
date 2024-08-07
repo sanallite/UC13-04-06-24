@@ -10,23 +10,27 @@ import TelaDois from './src/TelaDois';
 import TelaTres from './src/TelaTres';
 import TelaQuatro from './src/TelaQuatro';
 import TelaPaciente from './src/TelaPaciente';
+import TelaMedico from './src/TelaMedico';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='TelaPaciente' >
-        <Stack.Screen name = "TelaUm" component={ TelaUm } />
+      <Stack.Navigator initialRouteName='TelaUm' >
+        <Stack.Screen name = "TelaUm" component={ TelaUm } options={{ title: '' }}/>
 
-        <Stack.Screen name = "TelaDois" component={ TelaDois } />
+        <Stack.Screen name = "TelaDois" component={ TelaDois } options={{ title: '' }}/>
 
-        <Stack.Screen name = "TelaTres" component={ TelaTres } />
+        <Stack.Screen name = "TelaTres" component={ TelaTres } options={{ title: '' }}/>
         
-        <Stack.Screen name = "TelaQuatro" component={ TelaQuatro } />
+        <Stack.Screen name = "TelaQuatro" component={ TelaQuatro } options={{ title: '' }}/>
         {/* Não esqueça da diferença entre name e title! */}
 
-        <Stack.Screen name = "TelaPaciente" component={ TelaPaciente } />
+        <Stack.Screen name = "TelaPaciente" component={ TelaPaciente } options={{ title: 'Cadastro' }}/>
+
+        <Stack.Screen name = "TelaMedico" component={ TelaMedico } options={{ title: '' }}/>
+        {/* A tela precisa ser adicionada aqui para se possa usar os métodos de navegaçãos */}
       </Stack.Navigator>
     </NavigationContainer>
   )
