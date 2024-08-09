@@ -9,7 +9,7 @@ Componente Picker
 ``npx expo install @react-native-picker/picker``
 
 Componente Slider
-```npx expo install @react-native-community/slider``
+``npx expo install @react-native-community/slider``
 
 Navegação de telas
 ``npx expo install @react-navigation/native``
