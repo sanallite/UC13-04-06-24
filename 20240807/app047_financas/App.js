@@ -1,20 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+/* Aula 19 - Navegação entre telas, Stack Navigation - Desafio máximo, App de finanças */
+
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import Inicial from './conteudo/Inicial';
+import Vendas from './conteudo/Vendas';
+import Compras from './conteudo/Compras';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+  const Pilha = createNativeStackNavigator();
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  return (
+    <NavigationContainer>
+      <Pilha.Navigator initialRouteName='Tela Inicial'>
+        <Pilha.Screen name='Tela Inicial' component={ Inicial } />
+
+        <Pilha.Screen name='Tela de Vendas' component={ Vendas } />
+        
+        <Pilha.Screen name='Tela de Compras' component={ Compras } />
+      </Pilha.Navigator>
+    </NavigationContainer>
+  )
+}
