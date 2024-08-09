@@ -1,14 +1,23 @@
 /* Aula 19 - Navegação entre telas, Stack Navigation - Desafios 4 e 5, Componente com a estrutura do conteúdo de cada tela */
 
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, Image, Pressable } from 'react-native';
 import { estilo } from './estilos';
 import { useNavigation } from '@react-navigation/native';
+import { Picker } from '@react-native-picker/picker';
 
 export default function ConteudoTelas(props) {
     const navegacao = useNavigation();
     let botao1, botao2, param1, param2;
     let proxima = props.proximaTela;
+    
+    const [ ItemSelecionado, setItem ] = useState('');
+
+    function alterarItem(valor) {
+        setItem(valor);
+
+        navegarTelas(valor);
+    }
 
     if ( props.telaFinal ) {
         botao1 = 'Sou Médico';
@@ -41,9 +50,9 @@ export default function ConteudoTelas(props) {
             navegacao.navigate('TelaMedico');
         }
 
-        else {
+        /* else {
             navegacao.navigate('TelaUm');
-        }
+        } */
     }
 
     /* Essa variável não pode ser definida como constante, pois seu valor vai ser alterado de acordo com uma prop do componente */
@@ -65,6 +74,18 @@ export default function ConteudoTelas(props) {
                 <Pressable style={[ estilo.pressionaveis, estilo.proximo ]} onPress={ () => navegarTelas(param2) }>
                     <Text style={[ estilo.textoPress, { color: 'white' } ]}>{botao2}</Text>
                 </Pressable>
+            </View>
+        )
+    }
+
+    else if ( props.telaFinal ) {
+        viewBotoes = (
+            <View style={ estilo.navegacao }>
+                <Picker selectedValue = { ItemSelecionado } onValueChange = { alterarItem } >
+                    <Picker.Item value = '' label = 'Selecione' />
+                    <Picker.Item value = 'paciente' label = 'Sou Paciente' />
+                    <Picker.Item value = 'medico' label = 'Sou Médico' />
+                </Picker>
             </View>
         )
     }
