@@ -7,13 +7,49 @@ import { useNavigation } from '@react-navigation/native';
 export default function Compras() {
     const nav = useNavigation();
 
-    const [ estadoSwitch1, mudarEstado1 ] = useState( 0 );
-    const [ estadoSwitch2, mudarEstado2 ] = useState( 0 );
-    const [ estadoSwitch3, mudarEstado3 ] = useState( 0 );
+    const [ estadoSwitch1, mudarEstado1 ] = useState( false );
+    const [ estadoSwitch2, mudarEstado2 ] = useState( false );
+    const [ estadoSwitch3, mudarEstado3 ] = useState( false );
 
     const mudarTela = () => {
-        if ( estadoSwitch1 === 1 ) {
-            nav.navigate('Tela Inicial');
+        console.log(estadoSwitch1);
+        /* Mesmo que se o estado inicial do Switch for definido como outra coisa, como o número zero, o valor de estado que é alterado alterna entre true e false */
+
+        if ( estadoSwitch1 === true ) {
+            if ( estadoSwitch2 === true || estadoSwitch3 === true  ) {
+                mudarEstado2(false);
+                mudarEstado3(false);
+                mudarEstado1(false);
+            }
+
+            else {
+                nav.navigate('Tela Inicial');
+            }
+        }
+        /* Se o Switch escolhido estiver ativado e os outros desativados, será feita a navegação de tela, caso contrário, todos os Switches serão desativados até que apenas um esteja ativado. */
+
+        else if ( estadoSwitch2 === true ) {
+            if ( estadoSwitch1 === true || estadoSwitch3 === true  ) {
+                mudarEstado1(false);
+                mudarEstado2(false);
+                mudarEstado3(false);
+            }
+
+            else {
+                nav.navigate('Tela de Vendas');
+            }
+        }
+
+        else if ( estadoSwitch3 === true ) {
+            if ( estadoSwitch1 === true || estadoSwitch2 === true  ) {
+                mudarEstado1(false);
+                mudarEstado2(false);
+                mudarEstado3(false);
+            }
+
+            else {
+                nav.navigate('Tela de Inicial');
+            }
         }
     }
 
@@ -27,11 +63,13 @@ export default function Compras() {
                 <Switch value={ estadoSwitch1 } onValueChange={ (novoValor) => mudarEstado1(novoValor) } />
                 <Switch value={ estadoSwitch2 } onValueChange={ (novoValor) => mudarEstado2(novoValor) } />
                 <Switch value={ estadoSwitch3 } onValueChange={ (novoValor) => mudarEstado3(novoValor) } />
+                {/* A cada alteração de valor é chamada uma função aero, enviando um parâmetro para a função que altera o estado da variável, esse parâmetro é o novo valor do componente, nesse caso alternando entre true e false */}
             </View>
 
             <Pressable onPress={ mudarTela }>
                 <Text>Continuar</Text>
             </Pressable>
+            {/* Apenas quando o componente for pressionado que será chamada a função utilizada para fazer a navegação entre telas. */}
         </View>
     )
 }
