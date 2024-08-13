@@ -5,6 +5,8 @@ import { View, Text, Pressable } from 'react-native';
 import Slider from '@react-native-community/slider';
 import { useNavigation } from '@react-navigation/native';
 
+import RelatorioVendas from './RelatorioVendas';
+
 export default function Vendas() {
     const [ valorAtual, setValor ] = useState( 0 );
     const nav = useNavigation();
@@ -27,11 +29,11 @@ export default function Vendas() {
 
     return (
         <View>
-            <View>
-                <Text>Relatório de Vendas</Text>
-            </View>
+            <RelatorioVendas />            
 
             <View>
+                <Text>Navegação</Text>
+
                 <Slider mininumValue={ valorAtual } maximumValue={ 2 } step={ 1 } onValueChange={ alterarValor } />
 
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>

@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { View, Text, Switch, Pressable } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import RelatorioCompras from './RelatorioCompras';
 
 export default function Compras() {
     const nav = useNavigation();
@@ -48,22 +49,37 @@ export default function Compras() {
             }
 
             else {
-                nav.navigate('Tela de Inicial');
+                nav.navigate('Tela de Pagamentos');
             }
         }
     }
 
     return (
         <View>
-            <View>
-                <Text>Relatório de Compras</Text>
-            </View>
+            <RelatorioCompras />
             
             <View>
-                <Switch value={ estadoSwitch1 } onValueChange={ (novoValor) => mudarEstado1(novoValor) } />
-                <Switch value={ estadoSwitch2 } onValueChange={ (novoValor) => mudarEstado2(novoValor) } />
-                <Switch value={ estadoSwitch3 } onValueChange={ (novoValor) => mudarEstado3(novoValor) } />
-                {/* A cada alteração de valor é chamada uma função aero, enviando um parâmetro para a função que altera o estado da variável, esse parâmetro é o novo valor do componente, nesse caso alternando entre true e false */}
+                <Text>Navegação</Text>
+
+                <View style={{ flexDirection: 'row' }}>
+                    <Switch value={ estadoSwitch1 } onValueChange={ (novoValor) => mudarEstado1(novoValor) } />
+
+                    <Text>Ir para a Tela Inicial</Text>
+                </View>
+
+                <View>
+                    <Switch value={ estadoSwitch2 } onValueChange={ (novoValor) => mudarEstado2(novoValor) } />
+
+                    <Text>Ir para a Tela de Vendas</Text>
+                </View>
+
+                <View>
+                    <Switch value={ estadoSwitch3 } onValueChange={ (novoValor) => mudarEstado3(novoValor) } />
+                    {/* A cada alteração de valor é chamada uma função aero, enviando um parâmetro para a função que altera o estado da variável, esse parâmetro é o novo valor do componente, nesse caso alternando entre true e false */}
+
+                    <Text>Ir para a tela de Pagamentos</Text>
+                </View>
+                
             </View>
 
             <Pressable onPress={ mudarTela }>

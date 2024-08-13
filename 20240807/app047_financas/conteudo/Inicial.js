@@ -31,6 +31,7 @@ export default function Inicial() {
                     <Picker.Item label='Selecione Uma Categoria' value= '' />
                     <Picker.Item label='Vendas' value='Tela de Vendas' />
                     <Picker.Item label='Compras' value='Tela de Compras' />
+                    <Picker.Item label='Pagamentos' value='Tela de Pagamentos' />
                 </Picker>
 
                 <Pressable onPress={ () => mudarTela(itemSelected) }>
