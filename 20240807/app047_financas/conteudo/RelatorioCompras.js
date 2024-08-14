@@ -16,13 +16,13 @@ export default function RelatorioCompras() {
         return (
             <View>
                 <View>
-                    {/* <Text>{item.mome}</Text> */}
+                    <Text>{item.mome}</Text>
                 </View>
 
                 <View>
                     <Text>Valor Investido:</Text>
 
-                    {/* <Text>{item.valor_investido}</Text> */}
+                    <Text>{item.valor_investido}</Text>
                 </View>
             </View>
         )
@@ -37,10 +37,11 @@ export default function RelatorioCompras() {
 
             <View>
                 <Text>Categoria Com Maior Gasto:</Text>
-                <Text>{ categorias[1] }</Text>
+                <Text>{ categorias[1].nome }</Text>
+                {/* Você precisa extrair o valor da propriedade que quer exibir daquele item do array, porque um objeto inteiro não vai ser exibido, exceto se você torná-lo uma string com JSON.stringfy() */}
             </View>
 
-            {/* <FlatList data={ categorias } keyExtractor={ (item) => item.nome } renderItem={ renderizar } /> */}
+            <FlatList data={ categorias } keyExtractor={ (item) => item.nome } renderItem={ renderizar } />
         </View>
     )
 }

@@ -21,7 +21,7 @@ export default function App() {
         
         <Pilha.Screen name='Tela de Compras' component={ Compras } options={{ title: 'Relatório de Compras e Gastos' }}/>
 
-        <Pilha.Screen name='Tela de Pagamentos' component={ Pagamentos } />
+        <Pilha.Screen name='Tela de Pagamentos' component={ Pagamentos } options={{ title: 'Folha de Pagamentos' }}/>
       </Pilha.Navigator>
     </NavigationContainer>
   )

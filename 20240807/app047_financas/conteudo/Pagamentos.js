@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { View, Text, ScrollView, Pressable } from 'react-native';
 import Slider from '@react-native-community/slider';
 import { useNavigation } from '@react-navigation/native';
+import RelatorioPagamentos from './RelatorioPagamentos';
 
 export default function Pagamentos() {
     const nav = useNavigation();
@@ -31,11 +32,11 @@ export default function Pagamentos() {
 
     return (
         <View>
-            <View>
-                <Text>Folha de Pagamentos</Text>
-            </View>
+            <RelatorioPagamentos />
 
             <View>
+                <Text>Navegação</Text>
+
                 <Slider minimumValue={ 1 } maximumValue={ 4 } step={ 1 } value={ valorSlider } onValueChange={ mudarValor }/>
 
                 <ScrollView horizontal={ true }>

@@ -4,8 +4,13 @@ import React from 'react';
 import { View, Text, FlatList } from 'react-native';
 
 export default function RelatorioVendas() {
-    let resultados = '1.340.875,00';
-    let setores = [ 'Celulares', 'Computadores', 'Assistência Técnica', 'Acessórios' ];
+    let resultados = '2.020.565,22';
+    let setores = [ 
+        { nome: 'Celulares', resultados: '896.034,22', numero_vendas: 3000 }, 
+        { nome: 'Computadores', resultados: '567.435,64', numero_vendas: 2145 },
+        { nome: 'Assistência Técnica', resultados: '425.642,11', numero_vendas: 1459 },
+        { nome: 'Acessórios', resultados: '131.453,25', numero_vendas: 1123 }
+    ];
 
     return (
         <View>
@@ -16,7 +21,8 @@ export default function RelatorioVendas() {
 
             <View>
                 <Text>Setor Mais Rentável:</Text>
-                <Text>{setores[0]}</Text>
+                <Text>{setores[0].nome}</Text>
+                {/* Você precisa extrair o valor da propriedade que quer exibir daquele item do array, porque um objeto inteiro não vai ser exibido, exceto se você torná-lo uma string com JSON.stringfy() */}
             </View>
 
             <View>
@@ -25,14 +31,13 @@ export default function RelatorioVendas() {
                 <FlatList data={ setores } keyExtractor={( item, index ) => item[index] } renderItem={ ({item}) => ( 
                     <View>
                         <View>
-                            <Text>{item}</Text>
+                            <Text>{item.nome}</Text>
                         </View>
-                        {/* Por algum motivo não foi possível exibir os itens se eles sendo objetos, o que seria útil para mostrar nomes e resultados diferentes, eu poderia fazer a renderização ser uma função separada, mas quis deixar um exemplo de renderização em linha */}
 
                         <View>
-                            <Text>Resultados Brutos: 99.999,00</Text>
+                            <Text>Resultados Brutos: R$ {item.resultados}</Text>
                             
-                            <Text>Número de Vendas: 300</Text>
+                            <Text>Número de Vendas: {item.numero_vendas}</Text>
                         </View>
                     </View>
                 ) } />
