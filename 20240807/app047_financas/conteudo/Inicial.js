@@ -21,7 +21,11 @@ export default function Inicial() {
     return (
         <View>
             <View>
-                <Text>Tela Inicial</Text>
+                <Text>Finanças Empresariais</Text>
+            </View>
+
+            <View>
+                <Text>Administre as finanças da sua empresa facilmente através desse aplicativo. Começe pela categoria que quiser e navegue livremente pelas telas.</Text>
             </View>
 
             <View>
