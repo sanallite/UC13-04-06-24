@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { View, Text, FlatList } from 'react-native';
+import { estilo } from '../estilo';
 
 export default function RelatorioVendas() {
     let resultados = '2.020.565,22';
@@ -13,7 +14,7 @@ export default function RelatorioVendas() {
     ];
 
     return (
-        <View>
+        <View style={ estilo.relatorioVendas }>
             <View>
                 <Text>Valor Bruto Recebido:</Text>
                 <Text>R$ {resultados}</Text>

@@ -15,13 +15,13 @@ export default function App() {
   return (
     <NavigationContainer>
       <Pilha.Navigator initialRouteName='Tela Inicial'>
-        <Pilha.Screen name='Tela Inicial' component={ Inicial } />
+        <Pilha.Screen name='Tela Inicial' component={ Inicial } options={{ title: 'Finanças Empresariais', headerStyle: { backgroundColor: 'orange' }, headerTintColor: 'white', headerShadowVisible: false, headerTitleAlign: 'center' }}   /* headerBackground= 'headerTransparent' */ />
 
-        <Pilha.Screen name='Tela de Vendas' component={ Vendas } options={{ title: 'Relatório de Vendas' }} />
+        <Pilha.Screen name='Tela de Vendas' component={ Vendas } options={{ title: 'Relatório de Vendas', headerStyle: { backgroundColor: '#5fddb9' }, headerTintColor: 'white', headerShadowVisible: false, headerTitleAlign: 'center' }} />
         
-        <Pilha.Screen name='Tela de Compras' component={ Compras } options={{ title: 'Relatório de Compras e Gastos' }}/>
+        <Pilha.Screen name='Tela de Compras' component={ Compras } options={{ title: 'Relatório de Compras e Gastos', headerStyle: { backgroundColor: '#f95858' }, headerTintColor: 'white', headerShadowVisible: false, headerTitleAlign: 'center' }}/>
 
-        <Pilha.Screen name='Tela de Pagamentos' component={ Pagamentos } options={{ title: 'Folha de Pagamentos' }}/>
+        <Pilha.Screen name='Tela de Pagamentos' component={ Pagamentos } options={{ title: 'Folha de Pagamentos', headerStyle: { backgroundColor: '#7188ea' }, headerTintColor: 'white', headerShadowVisible: false, headerTitleAlign: 'center' }}/>
       </Pilha.Navigator>
     </NavigationContainer>
   )

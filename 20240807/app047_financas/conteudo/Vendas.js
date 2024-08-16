@@ -6,6 +6,7 @@ import Slider from '@react-native-community/slider';
 import { useNavigation } from '@react-navigation/native';
 
 import RelatorioVendas from './RelatorioVendas';
+import { estilo } from '../estilo';
 
 export default function Vendas() {
     const [ valorAtual, setValor ] = useState( 0 );
@@ -28,7 +29,7 @@ export default function Vendas() {
     }
 
     return (
-        <View>
+        <View style={[ estilo.fundo, { backgroundColor: '#5fddb9' } ]}>
             <RelatorioVendas />            
 
             <View>
