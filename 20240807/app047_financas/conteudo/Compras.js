@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { View, Text, Switch, Pressable } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import RelatorioCompras from './RelatorioCompras';
+import { estilo } from '../estilo';
 
 export default function Compras() {
     const nav = useNavigation();
@@ -55,37 +56,38 @@ export default function Compras() {
     }
 
     return (
-        <View>
+        <View style={[ estilo.fundo, { backgroundColor: '#f95858' } ]}>
             <RelatorioCompras />
             
-            <View>
-                <Text>Navegação</Text>
+            <View style={ estilo.navegacao }>
+                <Text style={ estilo.textoNavegacao }>Navegação</Text>
 
-                <View style={{ flexDirection: 'row' }}>
+                <View style={ estilo.opcoesNavegacao }>
                     <Switch value={ estadoSwitch1 } onValueChange={ (novoValor) => mudarEstado1(novoValor) } />
 
-                    <Text>Ir para a Tela Inicial</Text>
+                    <Text style={{ marginLeft: '1rem' }}>Ir para a Tela Inicial</Text>
                 </View>
 
-                <View>
+                <View style={ estilo.opcoesNavegacao }>
                     <Switch value={ estadoSwitch2 } onValueChange={ (novoValor) => mudarEstado2(novoValor) } />
 
-                    <Text>Ir para a Tela de Vendas</Text>
+                    <Text style={{ marginLeft: '1rem' }}>Ir para a Tela de Vendas</Text>
                 </View>
 
-                <View>
+                <View style={ estilo.opcoesNavegacao }>
                     <Switch value={ estadoSwitch3 } onValueChange={ (novoValor) => mudarEstado3(novoValor) } />
                     {/* A cada alteração de valor é chamada uma função aero, enviando um parâmetro para a função que altera o estado da variável, esse parâmetro é o novo valor do componente, nesse caso alternando entre true e false */}
 
-                    <Text>Ir para a tela de Pagamentos</Text>
+                    <Text style={{ marginLeft: '1rem' }}>Ir para a tela de Pagamentos</Text>
                 </View>
                 
+                <View style={{ alignItems: 'center' }}>
+                    <Pressable onPress={ mudarTela } style={ estilo.pressable }>
+                        <Text style={{ color: 'gray' }}>Continuar</Text>
+                    </Pressable>
+                    {/* Apenas quando o componente for pressionado que será chamada a função utilizada para fazer a navegação entre telas. */}
+                </View>
             </View>
-
-            <Pressable onPress={ mudarTela }>
-                <Text>Continuar</Text>
-            </Pressable>
-            {/* Apenas quando o componente for pressionado que será chamada a função utilizada para fazer a navegação entre telas. */}
         </View>
     )
 }

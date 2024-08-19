@@ -1,7 +1,7 @@
 /* Aula 19 - Navegação entre telas, Stack Navigation - Desafio máximo, App de finanças - Componente do conteúdo da tela de vendas */
 
 import React from 'react';
-import { View, Text, FlatList } from 'react-native';
+import { View, Text, FlatList, ScrollView } from 'react-native';
 import { estilo } from '../estilo';
 
 export default function RelatorioVendas() {
@@ -14,36 +14,36 @@ export default function RelatorioVendas() {
     ];
 
     return (
-        <View style={ estilo.relatorioVendas }>
-            <View>
-                <Text>Valor Bruto Recebido:</Text>
-                <Text>R$ {resultados}</Text>
+        <View style={ estilo.relatorios }>
+            <View style={ estilo.resultados }>
+                <Text style={ estilo.textoResultados }>Valor Bruto Recebido:</Text>
+                <Text style={ estilo.textoResultados }>R$ {resultados}</Text>
             </View>
 
-            <View>
-                <Text>Setor Mais Rentável:</Text>
-                <Text>{setores[0].nome}</Text>
+            <View style={ estilo.resultados }>
+                <Text style={ estilo.textoResultados }>Setor Mais Rentável:</Text>
+                <Text style={ estilo.destaques }>{setores[0].nome}</Text>
                 {/* Você precisa extrair o valor da propriedade que quer exibir daquele item do array, porque um objeto inteiro não vai ser exibido, exceto se você torná-lo uma string com JSON.stringfy() */}
             </View>
 
-            <View>
-                <Text>Setores</Text>
-
-                <FlatList data={ setores } keyExtractor={( item, index ) => item[index] } renderItem={ ({item}) => ( 
-                    <View>
-                        <View>
-                            <Text>{item.nome}</Text>
-                        </View>
-
-                        <View>
-                            <Text>Resultados Brutos: R$ {item.resultados}</Text>
-                            
-                            <Text>Número de Vendas: {item.numero_vendas}</Text>
-                        </View>
-                    </View>
-                ) } />
-                {/* Na renderização do item, é chamada uma função anônima, passado por parâmetro um objeto que contém o item, mas não apenas ele, também podendo conter o index do item por exemplo. Usando as chaves você extraí apenas o item, que é o valor do item no array fonte e envia para renderização, usando o return através dos parênteses. */}
+            <View style={ estilo.tituloLista }>
+                <Text style={ estilo.textoResultados }>Setores</Text>
             </View>
+
+            <FlatList data={ setores } keyExtractor={( item, index ) => item[index] } renderItem={ ({item}) => ( 
+                <View style={ estilo.itensLista }>
+                    <View>
+                        <Text style={ estilo.nomeSetores }>{item.nome}</Text>
+                    </View>
+
+                    <View>
+                        <Text style={ estilo.textos }>Resultados Brutos: R$ {item.resultados}</Text>
+                        
+                        <Text style={ estilo.textos }>Número de Vendas: {item.numero_vendas}</Text>
+                    </View>
+                </View>
+            ) } />
+            {/* Na renderização do item, é chamada uma função anônima, passado por parâmetro um objeto que contém o item, mas não apenas ele, também podendo conter o index do item por exemplo. Usando as chaves você extraí apenas o item, que é o valor do item no array fonte e envia para renderização, usando o return através dos parênteses. */}
         </View>
     )
 }

@@ -32,8 +32,8 @@ export default function Vendas() {
         <View style={[ estilo.fundo, { backgroundColor: '#5fddb9' } ]}>
             <RelatorioVendas />            
 
-            <View>
-                <Text>Navegação</Text>
+            <View style={ estilo.navegacao }>
+                <Text style={ estilo.textoNavegacao }>Navegação</Text>
 
                 <Slider mininumValue={ valorAtual } maximumValue={ 2 } step={ 1 } onValueChange={ alterarValor } />
 
@@ -43,9 +43,9 @@ export default function Vendas() {
                     <Text>Tela de Compras</Text>
                 </View>
 
-                <View>
-                    <Pressable onPress={ () => mudarTela(valorAtual) }>
-                        <Text>Continuar</Text>
+                <View style={{ alignItems: 'center' }}>
+                    <Pressable onPress={ () => mudarTela(valorAtual) } style={ estilo.pressable }>
+                        <Text style={{ color: 'gray' }}>Continuar</Text>
                     </Pressable>
                 </View>
             </View>

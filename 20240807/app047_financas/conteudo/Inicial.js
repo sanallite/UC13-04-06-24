@@ -29,7 +29,7 @@ export default function Inicial() {
                 <Text style={ estilo.descInicial }>Administre as finanças da sua empresa facilmente através desse aplicativo. Começe pela categoria que quiser e navegue livremente pelas telas.</Text>
             </View>
 
-            <View style={ estilo.conteudoInicial }>
+            <View style={[ estilo.navegacao, { flex: 1 } ]}>
                 <Picker selectedValue={ itemSelected } onValueChange={ alterarItem } style={ estilo.pickerInicial }>
                 {/* Na chamada da função a cada mudança de valor, não deve-se coloca-lá numa função aero, nem definir um valor entre parênteses, com o parâmetro sendo enviado automáticamente */}
 

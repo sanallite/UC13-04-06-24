@@ -26,10 +26,9 @@ export const estilo = StyleSheet.create({
         textAlign: 'center'
     },
 
-    conteudoInicial: {
+    navegacao: {
         padding: '1rem',
-        flex: 1,
-        backgroundColor: '#ffbf68',
+        backgroundColor: 'rgba(255, 255, 255, 0.5)',
         marginVertical: '1rem',
         marginHorizontal: '1rem',
         borderRadius: 20
@@ -53,8 +52,66 @@ export const estilo = StyleSheet.create({
         borderWidth: 1
     },
 
-    relatorioVendas: {
+    relatorios: {
         flex: 1,
         padding: '1rem'
+    },
+
+    resultados: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginBottom: '1rem',
+        alignItems: 'center'
+    },
+
+    textoResultados: {
+        fontWeight: 'bold',
+        fontSize: '1.2rem',
+        color: 'white'
+    },
+
+    destaques: {
+        backgroundColor: 'white',
+        borderRadius: 5,
+        padding: '0.625rem',
+        borderColor: 'green',
+        borderWidth: 1,
+        color: 'green'
+    },
+
+    tituloLista: {
+        alignItems: 'center',
+        marginBottom: '1rem'
+    },
+
+    itensLista: {
+        backgroundColor: 'white',
+        marginBottom: '0.625rem',
+        padding: '0.625rem',
+        borderRadius: 5
+    },
+
+    nomeSetores: {
+        fontSize: '1.1rem',
+        fontWeight: 'bold',
+        color: 'gray'
+    },
+
+    textos: {
+        fontSize: '1rem',
+        color: 'gray'
+    },
+
+    textoNavegacao: {
+        textAlign: 'center',
+        marginBottom: '0.625rem',
+        fontWeight: 'bold',
+        fontSize: '1rem',
+        /* color: 'gray' */
+    },
+
+    opcoesNavegacao: {
+        flexDirection: 'row',
+        marginBottom: '0.625rem'
     }
 })
