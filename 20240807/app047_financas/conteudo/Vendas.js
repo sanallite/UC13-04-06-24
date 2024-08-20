@@ -25,7 +25,9 @@ export default function Vendas() {
             nav.navigate('Tela de Compras');
         }
 
-        console.log(selecionada);
+        else {
+            alert('Vamos Permancer Nessa Tela')
+        }
     }
 
     return (

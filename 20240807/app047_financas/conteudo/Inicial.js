@@ -16,7 +16,13 @@ export default function Inicial() {
     }
 
     const mudarTela = (selecionada) => {
-        nav.navigate(selecionada);
+        if ( selecionada != '' ) {
+            nav.navigate(selecionada);
+        }
+
+        else {
+            alert('Nenhuma Tela Selecionada');
+        }
     }
 
     let logo = require('./asset-management.png')

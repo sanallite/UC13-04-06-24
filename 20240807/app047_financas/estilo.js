@@ -113,5 +113,23 @@ export const estilo = StyleSheet.create({
     opcoesNavegacao: {
         flexDirection: 'row',
         marginBottom: '0.625rem'
+    },
+
+    scrollViewContainer: {
+        flex: 1
+    },
+
+    scrollNavegacao: {
+        flexDirection: 'row',
+        /* justifyContent: 'space-between', */
+        width: '100%',
+        paddingVertical: '0.625rem'
+    },
+
+    itensNavegacao: {
+        marginRight: '3rem',
+        /* backgroundColor: 'green', */
+        flex: 1,
+        textAlign: 'center'
     }
 })

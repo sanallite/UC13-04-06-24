@@ -15,9 +15,10 @@ export default function App() {
   return (
     <NavigationContainer>
       <Pilha.Navigator initialRouteName='Tela Inicial'>
-        <Pilha.Screen name='Tela Inicial' component={ Inicial } options={{ title: 'Finanças Empresariais', headerStyle: { backgroundColor: 'orange' }, headerTintColor: 'white', headerShadowVisible: false, headerTitleAlign: 'center' }}   /* headerBackground= 'headerTransparent' */ />
+        <Pilha.Screen name='Tela Inicial' component={ Inicial } options={{ title: 'Finanças Empresariais', headerStyle: { backgroundColor: 'orange' }, headerTintColor: 'white', headerShadowVisible: false, headerTitleAlign: 'center' }}   /* headerBackground= 'headerTransparent'  Pesquise depois! */ />
 
         <Pilha.Screen name='Tela de Vendas' component={ Vendas } options={{ title: 'Relatório de Vendas', headerStyle: { backgroundColor: '#5fddb9' }, headerTintColor: 'white', headerShadowVisible: false, headerTitleAlign: 'center' }} />
+        {/* Telas com várias definições de estilo. */}
         
         <Pilha.Screen name='Tela de Compras' component={ Compras } options={{ title: 'Relatório de Compras e Gastos', headerStyle: { backgroundColor: '#f95858' }, headerTintColor: 'white', headerShadowVisible: false, headerTitleAlign: 'center' }}/>
 

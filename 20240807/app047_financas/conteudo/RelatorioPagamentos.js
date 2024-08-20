@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { View, Text, SectionList } from 'react-native';
+import { estilo } from '../estilo';
 
 export default function RelatorioPagamentos() {
     const setores = [ [ 'Celulares', 120 ], [ 'Computadores', 108 ], [ 'Assistência Técnica', 97 ], [ 'Acessórios', 75 ] ];
@@ -15,8 +16,8 @@ export default function RelatorioPagamentos() {
 
     function exibirNumeroF({ item }) {
         return (
-            <View>
-                <Text>Número de Funcionários: {item}</Text>
+            <View style={[ estilo.itensLista ]}>
+                <Text style={ estilo.textos }>Número de Funcionários: {item}</Text>
             </View>
         )
     }
@@ -24,50 +25,44 @@ export default function RelatorioPagamentos() {
     function exibirTituloS({ section }) {
         return (
             <View>
-                <Text>{section.title}</Text>
+                <Text style={ estilo.destaques }>{section.title}</Text>
             </View>
         )
     }
 
     return (
-        <View>
-            <View>
-                <Text>Valor Total Pago em Salários</Text>
-                <Text>R$ {valor_pago}</Text>
+        <View style={ estilo.relatorios }>
+            <View style={ estilo.resultados }>
+                <Text style={ estilo.textoResultados }>Valor Total Pago em Salários</Text>
+                <Text style={ estilo.textoResultados }>R$ {valor_pago}</Text>
             </View>
 
-            <View>
-                <View style={{ flexDirection: 'row' }}>
-                    <Text>Número de Colaboradores:</Text>
-                    <Text>{total_funcionarios}</Text>
-                </View>
-
-                <View style={{ flexDirection: 'row' }}>
-                    <Text>Média Salarial:</Text>
-                    <Text>{media_salarial}</Text>
-                </View>
+            <View style={ estilo.resultados }>
+                <Text style={ estilo.textoResultados }>Número de Colaboradores:</Text>
+                <Text style={ estilo.textoResultados }>{total_funcionarios}</Text>
             </View>
 
-            <View>
-                <View>
-                    <Text>Setores</Text>
-                </View>
-
-                <View>
-                    <SectionList 
-                        sections={[ 
-                            { title: setores[0][0], data: [setores[0][1]] },
-                            { title: setores[1][0], data: [setores[1][1]] },
-                            { title: setores[2][0], data: [setores[2][1]] },
-                            { title: setores[3][0], data: [setores[3][1]] },
-                        ]}
-                        /* A propriedade data precisa ser um vetor, pois ela percorre cada item das seções para exibir o conteúdo na tela, mesmo se tiver apenas um item, caso contrário ela retorna apenas um valor. A definição das seções também poderia ser feita utilizando a função map, para criar os objetos com title e data automáticamente, conforme o número de itens do vetor mapeado. Consulte o desafio 2 do SectionList para ver em ação. */
-                        
-                        renderItem={ exibirNumeroF }
-                        renderSectionHeader={ exibirTituloS }
-                    />
-                </View>
+            <View style={ estilo.resultados }>
+                <Text style={ estilo.textoResultados }>Média Salarial:</Text>
+                <Text style={ estilo.textoResultados }>R$ {media_salarial}</Text>
             </View>
+
+            <View style={ estilo.tituloLista }>
+                <Text style={ estilo.textoResultados }>Setores</Text>
+            </View>
+
+            <SectionList 
+                sections={[ 
+                    { title: setores[0][0], data: [setores[0][1]] },
+                    { title: setores[1][0], data: [setores[1][1]] },
+                    { title: setores[2][0], data: [setores[2][1]] },
+                    { title: setores[3][0], data: [setores[3][1]] },
+                ]}
+                /* A propriedade data precisa ser um vetor, pois ela percorre cada item das seções para exibir o conteúdo na tela, mesmo se tiver apenas um item, caso contrário ela retorna apenas um valor. A definição das seções também poderia ser feita utilizando a função map, para criar os objetos com title e data automáticamente, conforme o número de itens do vetor mapeado. Consulte o desafio 2 do SectionList para ver em ação. */
+                
+                renderItem={ exibirNumeroF }
+                renderSectionHeader={ exibirTituloS }
+            />
         </View>
     )
 }

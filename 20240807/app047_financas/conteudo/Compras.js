@@ -22,10 +22,14 @@ export default function Compras() {
                 mudarEstado2(false);
                 mudarEstado3(false);
                 mudarEstado1(false);
+                
+                alert('Selecione Apenas Uma Tela');
             }
 
             else {
                 nav.navigate('Tela Inicial');
+                
+                /* O estado do Switch não será alterado após a navegação, se você voltar para essa tela vai ver que o Switch ainda está ativado. */
             }
         }
         /* Se o Switch escolhido estiver ativado e os outros desativados, será feita a navegação de tela, caso contrário, todos os Switches serão desativados até que apenas um esteja ativado. */
