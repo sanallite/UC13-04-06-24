@@ -10,7 +10,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Lista'>
+      <Stack.Navigator initialRouteName='Formulario'>
         <Stack.Screen name='Formulario' component={ Formulario }/>
         <Stack.Screen name='Lista' component={ Lista }/>
       </Stack.Navigator>
