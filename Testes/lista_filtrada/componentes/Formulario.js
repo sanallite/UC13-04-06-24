@@ -30,9 +30,10 @@ export default function Formulario() {
 
             <TextInput placeholder='Descrição' value={ descricaoCompra } onChangeText={ setDescricao }/>
             <TextInput placeholder='Valor' value={ valorCompra } onChangeText={ setValor }/>
-            {/* <DatePicker
+            <DatePicker
                 date={ dataCompra }
-            /> */}
+                open = { false }
+            />
 
             <Button onPress={ enviarCompra } title='Enviar'/>
         </View>
