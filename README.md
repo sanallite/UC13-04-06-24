@@ -1,1 +1,1 @@
-Aulas sobre desenvolvimento mobile do meu curso técnico, utilizando React Native e Expo Go.
+Aulas sobre desenvolvimento mobile do meu curso técnico, utilizando React Native com o framework Expo.

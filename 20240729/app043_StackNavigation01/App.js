@@ -20,20 +20,20 @@ export default function App() {
 
   return (
     <NavigationContainer>
-        <Pilha.Navigator initialRouteName='Tela_Principal'>
-            <Pilha.Screen name='Tela_Principal'  component={ Tela_Principal } options={{ title: "Bem Vindo", headerStyle: { backgroundColor: "black" }, headerTintColor: "white" }}/>
-            {/* No parâmetro options, temos um objeto que atributos que vão criar um cabeçalho para a tela, usando o JSX para também fazer estilização em linha. Esse cabeçalho também cria automáticamente um botão de voltar para a tela inicial. */}
+    <Pilha.Navigator initialRouteName='Tela_Principal'>
+    <Pilha.Screen name='Tela_Principal'  component={ Tela_Principal } options={{ title: "Bem Vindo", headerStyle: { backgroundColor: "black" }, headerTintColor: "white" }}/>
+    {/* No parâmetro options, temos um objeto que atributos que vão criar um cabeçalho para a tela, usando o JSX para também fazer estilização em linha. Esse cabeçalho também cria automáticamente um botão de voltar para a tela inicial. */}
 
-            <Pilha.Screen name='Tela_Carnaval' component={ Tela_Carnaval } options={{ title: "Carnaval", headerStyle: { backgroundColor: 'black' }, headerTintColor: 'white' }}/>
-              
-            <Pilha.Screen name='Tela_FestaJunina' component={ Tela_FestaJunina } options={{ title: "Festa Junina", headerStyle: { backgroundColor: 'blue' }, headerTintColor: 'white' }}/>
-              
-            <Pilha.Screen name='Tela_Halloween' component={ Tela_Halloween } options={{ title: 'Halloween', headerStyle: { backgroundColor: 'orange' }, headerTintColor: 'white' }}/>
-            {/* Definindo quais serão as telas que poderemos navegar, utilizando o método Screen com seus parâmetros. */}
-            
-        </Pilha.Navigator>
-        {/* Componente da constante Pilha, utilizando seu método Navigator, com um parâmetro que define qual vai ser a primeira tela a ser apresentada. */}
-      
+    <Pilha.Screen name='Tela_Carnaval' component={ Tela_Carnaval } options={{ title: "Carnaval", headerStyle: { backgroundColor: 'black' }, headerTintColor: 'white' }}/>
+
+    <Pilha.Screen name='Tela_FestaJunina' component={ Tela_FestaJunina } options={{ title: "Festa Junina", headerStyle: { backgroundColor: 'blue' }, headerTintColor: 'white' }}/>
+
+    <Pilha.Screen name='Tela_Halloween' component={ Tela_Halloween } options={{ title: 'Halloween', headerStyle: { backgroundColor: 'orange' }, headerTintColor: 'white' }}/>
+    {/* Definindo quais serão as telas que poderemos navegar, utilizando o método Screen com seus parâmetros. */}
+
+    </Pilha.Navigator>
+    {/* Componente da constante Pilha, utilizando seu método Navigator, com um parâmetro que define qual vai ser a primeira tela a ser apresentada. */}
+
     </NavigationContainer>
     /* Esse componente vai funcionar como uma View, ou contâiner, que permite trabalhar com a biblioteca de navegação do React Native. */
   )
